@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+<h1>@ViewData["Title"]</h1>
+
+    <div class="d-flex align-content-around flex-wrap">
+        <div class="row">
+            <div class="card" style="width: 18rem;">
+                @using (Html.BeginForm("Product", "Home", FormMethod.Post))
+                {
+                    <img src="~/images/1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop 1</h5>
+                        <p class="card-text">Экран 17.3'' IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i7-10750H (2.6 - 5.0 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.2 кг / черный</p>
+                        <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
+                        @Html.Hidden("product", "1")
+                        <div class="btn btn-success disabled">Price: $900</div>
+                    </div>
+                }
+            </div>
+            <div class="card" style="width: 18rem;">
+                @using (Html.BeginForm("Product", "Home", FormMethod.Post))
+                {
+                    <img src="~/images/2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop 2</h5>
+                        <p class="card-text">Экран 17.3'' IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i7-10750H (2.6 - 5.0 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.2 кг / черный</p>
+                        <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
+                        @Html.Hidden("product", "2")
+                        <div class="btn btn-success disabled">Price: $1900</div>
+                    </div>
+                }
+            </div>
+            <div class="card" style="width: 18rem;">
+                @using (Html.BeginForm("Product", "Home", FormMethod.Post))
+                {
+                    <img src="~/images/3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop 3</h5>
+                        <p class="card-text">Экран 17.3'' IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i7-10750H (2.6 - 5.0 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.2 кг / черный</p>
+                        <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
+                        @Html.Hidden("product", "3")
+                        <div class="btn btn-success disabled">Price: $1500</div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="card" style="width: 18rem;">
+                @using (Html.BeginForm("Product", "Home", FormMethod.Post))
+                {
+                    <img src="~/images/4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop 4</h5>
+                        <p class="card-text">Экран 17.3'' IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i7-10750H (2.6 - 5.0 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.2 кг / черный</p>
+                        <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
+                        @Html.Hidden("product", "4")
+                        <div class="btn btn-success disabled">Price: $1000</div>
+                    </div>
+                }
+            </div>
+            <div class="card" style="width: 18rem;">
+                @using (Html.BeginForm("Product", "Home", FormMethod.Post))
+                {
+                    <img src="~/images/5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop 5</h5>
+                        <p class="card-text">Экран 17.3'' IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i7-10750H (2.6 - 5.0 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.2 кг / черный</p>
+                        <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
+                        @Html.Hidden("product", "5")
+                        <div class="btn btn-success disabled">Price: $1200</div>
+                    </div>
+                }
+            </div>
+            <div class="card" style="width: 18rem;">
+                @using (Html.BeginForm("Product", "Home", FormMethod.Post))
+                {
+                    <img src="~/images/6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop 6</h5>
+                        <p class="card-text">Экран 17.3'' IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i7-10750H (2.6 - 5.0 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.2 кг / черный</p>
+                        <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
+                        @Html.Hidden("product", "6")
+                        <div class="btn btn-success disabled">Price: $1300</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
