@@ -1,0 +1,17 @@
+﻿@using Products_Partial_Views_04._05._21
+@model List<Product>
+
+<div class="text-center">
+    <table>
+        <tr><td>Id</td><td>Name</td><td>Price</td><td>Created Date</td></tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.CreatedDate</td>
+            </tr>
+        }
+    </table>
+</div>

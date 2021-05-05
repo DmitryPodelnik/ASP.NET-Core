@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @await Html.PartialAsync("ProductsList")
+    <hr />
+    @await Html.PartialAsync("ProductsTable")
+</div>
