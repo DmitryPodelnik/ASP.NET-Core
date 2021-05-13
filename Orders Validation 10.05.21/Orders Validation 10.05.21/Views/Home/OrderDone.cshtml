@@ -1,0 +1,17 @@
+﻿@model Orders_Validation_10._05._21.Models.Order
+@{
+    ViewData["Title"] = "OrderDone";
+}
+
+<h3>
+    Your order
+    <small class="text-muted">has been successfully accepted.</small>
+</h3>
+
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Name: @Model.Name</li>
+    <li class="list-group-item">Address: @Model.Address</li>
+    <li class="list-group-item">Email: @Model.Email</li>
+    <li class="list-group-item">Date: @Model.Date</li>
+</ul>
+

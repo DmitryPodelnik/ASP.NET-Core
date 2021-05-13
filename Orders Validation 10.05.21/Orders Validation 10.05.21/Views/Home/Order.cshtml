@@ -1,0 +1,55 @@
+﻿@model Orders_Validation_10._05._21.Models.Order
+@{
+    ViewData["Title"] = "Order";
+}
+
+<form asp-action="Order" asp-controller="Home" method="post">
+    @*<div asp-validation-summary="All"></div>*@
+    <div>
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Address" class="form-label"></label>
+        <input asp-for="Address" class="form-control">
+        <span asp-validation-for="Address"></span>
+    </div>
+    <div>
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control">
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label class="form-label" asp-for="Date"></label><br />
+        <input asp-for="Date" size="30" />
+        <span asp-validation-for="Date"></span>
+    </div>
+    <div>
+        <div>
+            <input asp-for="TermsAccepted">
+            <label>
+                Agree to terms and conditions
+            </label>
+            <span asp-validation-for="TermsAccepted"></span>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary" type="submit" disabled="disabled" id="send" name="send">Order</button>
+    </div>
+    <script>
+        document.getElementById("TermsAccepted").addEventListener("change", function () {
+            if ($("#send").attr("disabled") === "disabled")
+                $("#send").removeAttr("disabled");
+            else
+                $("#send").attr("disabled", "disabled");
+        });
+    </script>
+</form>
+
+
+@section scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

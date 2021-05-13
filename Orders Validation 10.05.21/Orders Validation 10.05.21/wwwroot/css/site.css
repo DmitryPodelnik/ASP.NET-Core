@@ -1,0 +1,108 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* Стиль для элементов управления с ошибками валидации */
+input.input-validation-error {
+    border: 3px solid #b94a48;
+}
+
+/* Стиль специально для чекбокса с ошибками валидации */
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+/* Стиль для отдельного блока с ошибками валидации,
+   отображаемого хелпером Html.ValidationSummary */
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+/* Стиль для отдельного блока на случай отсутствия ошибок валидации,
+   отображаемого хелпером Html.ValidationSummary */
+.validation-summary-valid {
+    display: none;
+}
+
+/* Стиль для сообщения об ошибке валидации уровня свойства,
+   отображаемого хелпером Html.ValidationMessageFor */
+.field-validation-error {
+    font-size: 80%;
+    font-weight: bold;
+    color: #b94a48;
+    padding-left: 15px;
+}
+
+/* Стиль для отдельного блока на случай отсутствия ошибки валидации уровня свойства,
+   отображаемого хелпером Html.ValidationMessageFor */
+.field-validation-valid {
+    display: none;
+}
