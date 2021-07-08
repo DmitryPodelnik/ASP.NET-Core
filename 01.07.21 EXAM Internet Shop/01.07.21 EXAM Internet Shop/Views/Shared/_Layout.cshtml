@@ -24,13 +24,6 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow" id="headerNav">
             <div class="container">
-
-                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#navbarToggleExternalContent2" aria-controls="navbarToggleExternalContent2"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/mainlogo.png" height="40" width="250" />
                 </a>
@@ -72,82 +65,95 @@
             </div>
         </nav>
     </header>
-    <div class="collapse" id="navbarToggleExternalContent2">
-        <div class="bg-light shadow-3 p-4">
-            <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
-            <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
-            <button class="btn btn-link btn-block m-0">Link 3</button>
+    <!--Second button-->
+    <section class="mb-3">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler second-button btn-light" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarToggleExternalContent10"
+                        aria-controls="navbarToggleExternalContent10" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+                </button>
+            </div>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent10">
+            <div class="bg-light shadow-3 p-4">
+                <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
+                <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
+                <button class="btn btn-link btn-block m-0">Link 3</button>
+            </div>
         </div>
+    </section>
+    <!-- Sidenav -->
+    <aside>
+        <div class="col-2">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Laptops and PC</a>
+                <a class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Phone</a>
+                <a class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Goods for gamers</a>
+                <a class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Household products</a>
+                <a class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Household appliances</a>
+                <a class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Sports and hobbies</a>
+                <a class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Children's products</a>
+                <a class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Food</a>
+            </div>
+        </div>
+    </aside>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
-        <!-- Sidenav -->
-        <aside>
-            <div class="col-2">
-                <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Laptops and PC</a>
-                    <a class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Phone</a>
-                    <a class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Goods for gamers</a>
-                    <a class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Household products</a>
-                    <a class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Household appliances</a>
-                    <a class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Sports and hobbies</a>
-                    <a class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Children's products</a>
-                    <a class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Food</a>
-                </div>
-            </div>
-        </aside>
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+            <!-- Section: Social media -->
         </div>
-
-        <footer class="bg-dark text-center text-white">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-                <!-- Section: Social media -->
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-                    <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-
-                    <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                        <i class="fab fa-google"></i>
-                    </a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-                    <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-
-                    <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </section>
-                <!-- Section: Social media -->
-            </div>
-            <!-- Grid container -->
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2021 Copyright:
-                <a class="text-white" asp-area="" asp-controller="Home" asp-action="About">Dmytro Podelnik</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>        
-        @await RenderSectionAsync("Scripts", required: false)
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" asp-area="" asp-controller="Home" asp-action="About">Dmytro Podelnik</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
