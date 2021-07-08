@@ -1,4 +1,4 @@
-﻿using _01._07._21_EXAM_Internet_Shop.Models;
+﻿using _01._07._21_EXAM_Online_Store.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _01._07._21_EXAM_Internet_Shop.Controllers
+namespace _01._07._21_EXAM_Online_Store.Controllers
 {
     public class HomeController : Controller
     {

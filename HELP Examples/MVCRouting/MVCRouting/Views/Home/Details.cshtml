@@ -1,0 +1,17 @@
+﻿@model Post
+@{
+}
+
+@if (Model != null)
+{
+    <article>
+        <h1>@Model.Title</h1>
+        <p>@Model.Content</p>
+        <footer>
+            @foreach (var tag in Model.PostTags)
+            {
+               @Html.ActionLink(tag.Tag.Name, "GetByTag", "Home", new { tagName = tag.Tag.Name })
+            }
+        </footer>
+    </article>
+}

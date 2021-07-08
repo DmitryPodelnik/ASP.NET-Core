@@ -1,6 +1,6 @@
 using System;
 
-namespace _01._07._21_EXAM_Internet_Shop.Models
+namespace _01._07._21_EXAM_Online_Store.Models
 {
     public class ErrorViewModel
     {
