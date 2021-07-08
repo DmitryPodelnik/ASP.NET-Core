@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using _01._07._21_EXAM_Internet_Shop.Models;
 
 namespace _01._07._21_EXAM_Online_Store
 {
@@ -27,5 +28,7 @@ namespace _01._07._21_EXAM_Online_Store
         {
 
         }
+
+        public DbSet<_01._07._21_EXAM_Internet_Shop.Models.User> User { get; set; }
     }
 }
