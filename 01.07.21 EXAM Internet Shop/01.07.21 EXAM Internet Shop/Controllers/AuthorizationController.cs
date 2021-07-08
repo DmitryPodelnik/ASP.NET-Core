@@ -16,7 +16,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
     {
         private readonly OnlineStoreDbContext _context;
         //private readonly ILogger _logger;
-        private readonly ILogger _logger = Logging.CreateLogger<AuthorizationController>();
+        private readonly ILogger _logger = Log.CreateLogger<AuthorizationController>();
 
         public AuthorizationController(OnlineStoreDbContext context)
         {

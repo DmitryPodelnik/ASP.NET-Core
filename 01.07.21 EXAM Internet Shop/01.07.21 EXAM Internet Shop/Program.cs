@@ -21,6 +21,7 @@ namespace _01._07._21_EXAM_Online_Store
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .ConfigureLogging(logging => logging.SetMinimumLevel(LogLevel.Trace));
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _01._07._21_EXAM_Internet_Shop.Models
 {
-    static internal class Logging
+    static internal class Log
     {
         static internal ILoggerFactory LoggerFactory { get; set; }
         static internal ILogger CreateLogger<t>() => LoggerFactory.CreateLogger<t>();
