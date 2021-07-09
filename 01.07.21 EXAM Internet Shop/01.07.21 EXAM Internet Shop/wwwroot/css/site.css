@@ -114,3 +114,7 @@ li.nav-item {
     position: relative;
     z-index: 101;
 }
+
+#leftAside {
+    left: 0px;
+}
