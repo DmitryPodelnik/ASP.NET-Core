@@ -20,6 +20,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         }
 
         // GET: Products
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Products.ToListAsync());
