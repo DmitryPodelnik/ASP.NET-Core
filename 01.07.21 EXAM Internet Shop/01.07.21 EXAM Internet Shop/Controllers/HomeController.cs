@@ -25,6 +25,11 @@ namespace _01._07._21_EXAM_Online_Store.Controllers
             return View();
         }
 
+        public ActionResult GetLeftAside()
+        {
+            return PartialView("LeftAside");
+        }
+
         public IActionResult About()
         {
             return View();
