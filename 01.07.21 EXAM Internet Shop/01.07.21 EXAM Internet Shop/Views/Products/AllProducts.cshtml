@@ -1,26 +1,31 @@
 ﻿@using _01._07._21_EXAM_Internet_Shop.Models
-@model IEnumerable<Product>
+@model List<Product>
 @{
     ViewData["Title"] = "AllProducts";
 }
 
 <div class="d-flex align-content-around flex-wrap">
-    <div class="row">
-        <div class="card" style="width: 18rem;">
-            @using (Html.BeginForm("Product", "Home", FormMethod.Post))
-            {
-                <img src="~/images/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Laptop 1</h5>
-                    <p class="card-text">Экран 17.3'' IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i7-10750H (2.6 - 5.0 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 2.2 кг / черный</p>
-                    <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
-                    @Html.Hidden("product", "1")
-                    <div class="btn btn-success disabled">Price: $900</div>
-                </div>
-            }
-        </div>
-        
-    </div>
+    @foreach (var product in Model)
+    {
+    // <div class="row">
+            <div class="card" style="width: 18rem;">
+                @using (Html.BeginForm())
+                {
+                    <img src="~/images/1.jpg" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Content</p>
+                        <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
+                        @Html.Hidden("product", $"1")
+                        <div class="btn btn-success disabled">Price: $@product.Price</div>
+                    </div>
+                }
+            </div>
+
+       // </div>
+     }
 </div>
+
+@{await Html.RenderPartialAsync("LeftAside");}
 
 
