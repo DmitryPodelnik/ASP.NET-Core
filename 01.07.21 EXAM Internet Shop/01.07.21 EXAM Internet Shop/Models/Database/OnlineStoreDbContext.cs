@@ -5,8 +5,6 @@ namespace _01._07._21_EXAM_Online_Store
 {
     public  class OnlineStoreDbContext : DbContext
     {
-        //public DbSet<Gender> Genders { get; set; }
-
         public OnlineStoreDbContext(DbContextOptions<OnlineStoreDbContext> options) : base(options)
         {
             // Если такая БД уже есть, то удаляем ее
@@ -29,8 +27,8 @@ namespace _01._07._21_EXAM_Online_Store
 
         }
 
-        public DbSet<_01._07._21_EXAM_Internet_Shop.Models.User> User { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        public DbSet<_01._07._21_EXAM_Internet_Shop.Models.Product> Product { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

@@ -22,7 +22,14 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Product.ToListAsync());
+            return View(await _context.Products.ToListAsync());
+        }
+
+        // GET: Products
+        [HttpGet]
+        public async Task<IActionResult> AllProducts()
+        {
+            return View(await _context.Products.ToListAsync());
         }
 
         // GET: Products/Details/5
@@ -33,7 +40,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Product
+            var product = await _context.Products
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
@@ -73,7 +80,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Product.FindAsync(id);
+            var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
                 return NotFound();
@@ -124,7 +131,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Product
+            var product = await _context.Products
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
@@ -139,15 +146,15 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.Product.FindAsync(id);
-            _context.Product.Remove(product);
+            var product = await _context.Products.FindAsync(id);
+            _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProductExists(int id)
         {
-            return _context.Product.Any(e => e.Id == id);
+            return _context.Products.Any(e => e.Id == id);
         }
     }
 }

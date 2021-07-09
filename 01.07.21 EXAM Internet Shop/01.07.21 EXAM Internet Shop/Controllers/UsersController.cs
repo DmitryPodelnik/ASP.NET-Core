@@ -7,29 +7,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using _01._07._21_EXAM_Internet_Shop.Models;
 using _01._07._21_EXAM_Online_Store;
-using System.IO;
-using Microsoft.Extensions.Logging;
 
 namespace _01._07._21_EXAM_Internet_Shop.Controllers
 {
-    public class AuthorizationController : Controller
+    public class UsersController : Controller
     {
         private readonly OnlineStoreDbContext _context;
-        //private readonly ILogger _logger;
-        private readonly ILogger _logger = Log.CreateLogger<AuthorizationController>();
 
-        public AuthorizationController(OnlineStoreDbContext context)
+        public UsersController(OnlineStoreDbContext context)
         {
             _context = context;
         }
 
-        // GET: Authorization
+        // GET: Users
         public async Task<IActionResult> Index()
         {
             return View(await _context.Users.ToListAsync());
         }
 
-        // GET: Authorization/Details/5
+        // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -47,13 +43,13 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(user);
         }
 
-        // GET: Authorization/Create
+        // GET: Users/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Authorization/Create
+        // POST: Users/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -69,7 +65,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(user);
         }
 
-        // GET: Authorization/Edit/5
+        // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -85,7 +81,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(user);
         }
 
-        // POST: Authorization/Edit/5
+        // POST: Users/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -120,7 +116,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(user);
         }
 
-        // GET: Authorization/Delete/5
+        // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -138,7 +134,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(user);
         }
 
-        // POST: Authorization/Delete/5
+        // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -152,34 +148,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.Id == id);
-        }
-
-        public async Task<ActionResult> SigningIn(string username)
-        {
-            try
-            {
-                
-            }
-            catch (Exception e)
-            {
-                
-            }
-
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult Registration()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Registration(User user)
-        {
-            
-
-            return View(user);
         }
     }
 }
