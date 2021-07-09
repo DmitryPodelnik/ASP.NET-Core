@@ -52,15 +52,15 @@ namespace _01._07._21_EXAM_Online_Store
                 app.UseHsts();
             }
 
-            //Log.LoggerFactory = loggerFactory;
+            Log.LoggerFactory = loggerFactory;
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
             var logger = loggerFactory.CreateLogger("FileLogger");
 
-            app.Run(async (context) =>
-            {
-                logger.LogInformation("Processing request {0}", context.Request.Path);
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //app.Run(async (context) =>
+            //{
+                //logger.LogInformation("Processing request {0}", context.Request.Path);
+                //await context.Response.WriteAsync("Hello World!");
+            //});
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

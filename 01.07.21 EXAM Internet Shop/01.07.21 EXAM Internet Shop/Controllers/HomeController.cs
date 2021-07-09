@@ -30,8 +30,6 @@ namespace _01._07._21_EXAM_Online_Store.Controllers
             return View();
         }
 
-   
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
