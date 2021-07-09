@@ -118,3 +118,42 @@ li.nav-item {
 #leftAside {
     left: 0px;
 }
+
+/* Styles for form controls and validation helpers */
+
+/* Стиль для элементов управления с ошибками валидации */
+input.input-validation-error {
+    border: 3px solid red;
+}
+
+/* Стиль специально для чекбокса с ошибками валидации */
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+/* Стиль для отдельного блока с ошибками валидации,
+   отображаемого хелпером Html.ValidationSummary */
+.validation-summary-errors {
+    color: red;
+}
+
+/* Стиль для отдельного блока на случай отсутствия ошибок валидации,
+   отображаемого хелпером Html.ValidationSummary */
+.validation-summary-valid {
+    display: none;
+}
+
+/* Стиль для сообщения об ошибке валидации уровня свойства,
+   отображаемого хелпером Html.ValidationMessageFor */
+.field-validation-error {
+    font-size: 80%;
+    font-weight: bold;
+    color: red;
+    padding-left: 15px;
+}
+
+/* Стиль для отдельного блока на случай отсутствия ошибки валидации уровня свойства,
+   отображаемого хелпером Html.ValidationMessageFor */
+.field-validation-valid {
+    display: none;
+}

@@ -107,3 +107,4 @@ input[type="checkbox"].input-validation-error {
    отображаемого хелпером Html.ValidationMessageFor */
 .field-validation-valid {
     display: none;
+}
