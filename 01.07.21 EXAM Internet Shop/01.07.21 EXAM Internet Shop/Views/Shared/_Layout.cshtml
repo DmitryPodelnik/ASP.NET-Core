@@ -37,7 +37,7 @@
                             <div class="input-group">
                                 <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                                        aria-describedby="search-addon" />
-                                <button type="button" class="btn btn-outline-success">search</button>
+                                <button type="button" class="btn btn-success" style="margin-left: -5px; border-left: 0.1px solid black">search</button>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -58,28 +58,13 @@
                             <a class="nav-link" asp-area="" asp-controller="Authorization" asp-action="Registration">Registration</a>
                         </li>
                         <li class="nav-item">
-                            <img class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" src="~/images/cart.png" width="60" height="60" />
+                            <img class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" src="~/images/cart2.png" width="50" height="50" />
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-    <aside>
-        <div class="col-2">
-            <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Laptops and PC</a>
-                <a class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Phone</a>
-                <a class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Goods for gamers</a>
-                <a class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Household products</a>
-                <a class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Household appliances</a>
-                <a class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Sports and hobbies</a>
-                <a class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Children's products</a>
-                <a class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Food</a>
-            </div>
-        </div>
-    </aside>
 
     <!--Hamburger menu-->
     <section class="mb-3">
@@ -101,6 +86,21 @@
             </div>
         </div>
     </section>
+
+    <aside>
+        <div class="col-2" style="padding: 0px">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Laptops and PC</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Phone</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Goods for gamers</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Household products</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Household appliances</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Sports and hobbies</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Children's products</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Food</a>
+            </div>
+        </div>
+    </aside>
 
     <div class="container">
         <main role="main" class="pb-3">
