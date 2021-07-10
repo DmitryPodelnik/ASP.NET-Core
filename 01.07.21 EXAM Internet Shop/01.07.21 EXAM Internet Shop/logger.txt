@@ -507,3 +507,207 @@ Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Failed executing DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] ON;
+INSERT INTO [Products] ([Id], [CategoryId], [Content], [Image], [Name], [Price], [Seller])
+VALUES (1, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'1.jpg', N'Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black', 1500.0E0, N'ROZETKA'),
+(2, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'2.jpg', N'Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver', 1800.0E0, N'ROZETKA'),
+(3, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'3.jpg', N'Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey', 1300.0E0, N'ROZETKA'),
+(4, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'4.jpg', N'Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black', 1900.0E0, N'ROZETKA'),
+(5, 3, N'Ускоряйте свою игру!Переключайтесь между играми и работой, не сбрасывая скорость ни на секунду! Графическая подсистема ноутбука основана на видеокарте GeForce, гарантирующей плавную картинку в современных играх, а высокой производительности в широком спектре других приложений способствуют мощный процессор Intel Core 10-го поколения, дополненный быстрой памятью DDR4.', N'2.jpg', N'Ноутбук MSI GL65 Leopard 10SCSR (GL6510SCSR-077XUA ) Black', 1000.0E0, N'ROZETKA'),
+(6, 3, N'Куда бы дорога вас ни привелаМодель ThinkPad X1 Carbon (7th Gen) на 6% тоньше, чем ее предшественница. Толщина этого ноутбука — 14.95 мм, а вес составляет всего немного больше 1-го кг. Благодаря этой невероятной легкости ноутбука вы больше не будете привязаны к офису. Время автономной работы достигает 18.3 часа, поэтому вы можете брать ноутбук с собой куда угодно.', N'6.jpg', N'Laptop Asus ROG Zephyrus G14 GA401QE-HZ090T (90NR05R6-M01320) Eclipse Gray', 1500.0E0, N'ROZETKA');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] OFF;
+An unhandled exception has occurred while executing the request.
+Failed executing DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] ON;
+INSERT INTO [Products] ([Id], [CategoryId], [Content], [Image], [Name], [Price], [Seller])
+VALUES (1, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'1.jpg', N'Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black', 1500.0E0, N'ROZETKA'),
+(2, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'2.jpg', N'Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver', 1800.0E0, N'ROZETKA'),
+(3, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'3.jpg', N'Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey', 1300.0E0, N'ROZETKA'),
+(4, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'4.jpg', N'Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black', 1900.0E0, N'ROZETKA'),
+(5, 3, N'Ускоряйте свою игру!Переключайтесь между играми и работой, не сбрасывая скорость ни на секунду! Графическая подсистема ноутбука основана на видеокарте GeForce, гарантирующей плавную картинку в современных играх, а высокой производительности в широком спектре других приложений способствуют мощный процессор Intel Core 10-го поколения, дополненный быстрой памятью DDR4.', N'2.jpg', N'Ноутбук MSI GL65 Leopard 10SCSR (GL6510SCSR-077XUA ) Black', 1000.0E0, N'ROZETKA'),
+(6, 3, N'Куда бы дорога вас ни привелаМодель ThinkPad X1 Carbon (7th Gen) на 6% тоньше, чем ее предшественница. Толщина этого ноутбука — 14.95 мм, а вес составляет всего немного больше 1-го кг. Благодаря этой невероятной легкости ноутбука вы больше не будете привязаны к офису. Время автономной работы достигает 18.3 часа, поэтому вы можете брать ноутбук с собой куда угодно.', N'6.jpg', N'Laptop Asus ROG Zephyrus G14 GA401QE-HZ090T (90NR05R6-M01320) Eclipse Gray', 1500.0E0, N'ROZETKA');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] OFF;
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Failed executing DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] ON;
+INSERT INTO [Products] ([Id], [CategoryId], [Content], [Image], [Name], [Price], [Seller])
+VALUES (1, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'1.jpg', N'Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black', 1500.0E0, N'ROZETKA'),
+(2, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'2.jpg', N'Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver', 1800.0E0, N'ROZETKA'),
+(3, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'3.jpg', N'Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey', 1300.0E0, N'ROZETKA'),
+(4, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'4.jpg', N'Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black', 1900.0E0, N'ROZETKA'),
+(5, 3, N'Ускоряйте свою игру!Переключайтесь между играми и работой, не сбрасывая скорость ни на секунду! Графическая подсистема ноутбука основана на видеокарте GeForce, гарантирующей плавную картинку в современных играх, а высокой производительности в широком спектре других приложений способствуют мощный процессор Intel Core 10-го поколения, дополненный быстрой памятью DDR4.', N'2.jpg', N'Ноутбук MSI GL65 Leopard 10SCSR (GL6510SCSR-077XUA ) Black', 1000.0E0, N'ROZETKA'),
+(6, 3, N'Куда бы дорога вас ни привелаМодель ThinkPad X1 Carbon (7th Gen) на 6% тоньше, чем ее предшественница. Толщина этого ноутбука — 14.95 мм, а вес составляет всего немного больше 1-го кг. Благодаря этой невероятной легкости ноутбука вы больше не будете привязаны к офису. Время автономной работы достигает 18.3 часа, поэтому вы можете брать ноутбук с собой куда угодно.', N'6.jpg', N'Laptop Asus ROG Zephyrus G14 GA401QE-HZ090T (90NR05R6-M01320) Eclipse Gray', 1500.0E0, N'ROZETKA');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] OFF;
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Failed executing DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] ON;
+INSERT INTO [Products] ([Id], [CategoryId], [Content], [Image], [Name], [Price], [Seller])
+VALUES (1, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'1.jpg', N'Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black', 1500.0E0, N'ROZETKA'),
+(2, 1, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'2.jpg', N'Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver', 1800.0E0, N'ROZETKA'),
+(3, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'3.jpg', N'Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey', 1300.0E0, N'ROZETKA'),
+(4, 2, N'Видеокарта NVIDIA Geforce RTX 30-й серииИспользуя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые технологии искусственного интеллекта.', N'4.jpg', N'Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black', 1900.0E0, N'ROZETKA'),
+(5, 3, N'Ускоряйте свою игру!Переключайтесь между играми и работой, не сбрасывая скорость ни на секунду! Графическая подсистема ноутбука основана на видеокарте GeForce, гарантирующей плавную картинку в современных играх, а высокой производительности в широком спектре других приложений способствуют мощный процессор Intel Core 10-го поколения, дополненный быстрой памятью DDR4.', N'2.jpg', N'Ноутбук MSI GL65 Leopard 10SCSR (GL6510SCSR-077XUA ) Black', 1000.0E0, N'ROZETKA'),
+(6, 3, N'Куда бы дорога вас ни привелаМодель ThinkPad X1 Carbon (7th Gen) на 6% тоньше, чем ее предшественница. Толщина этого ноутбука — 14.95 мм, а вес составляет всего немного больше 1-го кг. Благодаря этой невероятной легкости ноутбука вы больше не будете привязаны к офису. Время автономной работы достигает 18.3 часа, поэтому вы можете брать ноутбук с собой куда угодно.', N'6.jpg', N'Laptop Asus ROG Zephyrus G14 GA401QE-HZ090T (90NR05R6-M01320) Eclipse Gray', 1500.0E0, N'ROZETKA');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CategoryId', N'Content', N'Image', N'Name', N'Price', N'Seller') AND [object_id] = OBJECT_ID(N'[Products]'))
+    SET IDENTITY_INSERT [Products] OFF;
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Failed executing DbCommand (111ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [OnlineStore];
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Failed executing DbCommand (103ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [OnlineStore];
+An unhandled exception has occurred while executing the request.
+Failed executing DbCommand (127ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [OnlineStore] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Failed executing DbCommand (100ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+DROP DATABASE [OnlineStore];
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The view 'GetProductsByCategory' was not found. Searched locations: /Views/Products/GetProductsByCategory.cshtml, /Views/Shared/GetProductsByCategory.cshtml
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [OnlineStore];
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop

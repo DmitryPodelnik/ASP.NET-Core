@@ -26,6 +26,8 @@ namespace _01._07._21_EXAM_Online_Store
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
 
         public DbSet<User> Users { get; set; }

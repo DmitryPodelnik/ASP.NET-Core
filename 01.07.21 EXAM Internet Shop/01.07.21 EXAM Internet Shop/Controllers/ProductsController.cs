@@ -26,12 +26,24 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(await _context.Products.ToListAsync());
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SearchProductsByName(string nameProduct)
+        {
+            var items = await _context.Products
+                                    .Where(p => p.Name.Contains(nameProduct))
+                                    .ToListAsync();
+
+            return View("AllProducts", items);
+        }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductsByCategory(int? category)
         {
-            return await _context.Products
+            var items = await _context.Products
                                     .Where(p => p.CategoryId == category)
                                     .ToListAsync();
+
+            return View("AllProducts", items);
         }
 
         // GET: Products/Details/5
