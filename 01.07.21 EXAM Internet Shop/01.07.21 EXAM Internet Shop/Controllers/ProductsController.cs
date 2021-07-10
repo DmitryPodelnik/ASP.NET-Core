@@ -20,8 +20,16 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         }
 
         // GET: Products
+        //[HttpGet]
+        //public async Task<IActionResult> AllProducts()
+        //{
+        //    return View(await _context.Products.ToListAsync());
+        //}
+
+        [Route("")]
+        [Route("{skip:int}/{pages:int}")]
         [HttpGet]
-        public async Task<IActionResult> AllProducts(int pages = 1, int skip = 0)
+        public async Task<IActionResult> AllProducts(int skip = 0, int pages = 1)
         {
             return View(await _context.Products
                 .Skip(skip * 12)
