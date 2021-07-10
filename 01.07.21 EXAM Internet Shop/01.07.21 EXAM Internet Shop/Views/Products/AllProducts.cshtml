@@ -8,21 +8,20 @@
 
     @{await Html.RenderPartialAsync("LeftAside");}
 
-    <div class="d-flex align-content-around flex-wrap" style="margin-left: 40px;">
+    <div class="d-flex align-content-around flex-wrap" style="margin-left: 40px; margin-top: -15.8px;">
 
         @foreach (var product in Model)
         {
             //<div class="row">
-            <div class="card" style="width: 20rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
+            <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
                 @using (Html.BeginForm())
                 {
                     <img src=~/images/Products/@product.Image class="card-img-top" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">@product.Name</h5>
-                        @*<p class="card-text">@product.Name</p>*@<p class="card-text"></p><p class="card-text"></p>
+                        <h6 class="card-title">@product.Name</h6>
                         <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
                         @Html.Hidden("product", $"1")
-                        <div class="btn btn-success disabled">Price: $@product.Price</div>
+                        <input type="submit" asp-controller="" asp-action="" class="btn btn-success" value="Price: $@product.Price"/>
                     </div>
                 }
             </div>
