@@ -23,7 +23,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> AllProducts()
         {
-            return View(await _context.Products.ToListAsync());
+            return View(await _context.Products
+                .Take(12)
+                .ToListAsync());
         }
 
         [HttpPost]
