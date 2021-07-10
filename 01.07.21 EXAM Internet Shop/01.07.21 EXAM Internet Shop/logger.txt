@@ -789,3 +789,30 @@ Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
 The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Failed executing DbCommand (279ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [OnlineStore];
+An unhandled exception has occurred while executing the request.
+Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [OnlineStore];
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.

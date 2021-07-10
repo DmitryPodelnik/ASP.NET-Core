@@ -21,10 +21,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
         // GET: Products
         [HttpGet]
-        public async Task<IActionResult> AllProducts(int page = 1)
+        public async Task<IActionResult> AllProducts(int pages = 1, int skip = 0)
         {
             return View(await _context.Products
-                .Take(page * 12)
+                .Skip(skip * 12)
+                .Take(pages * 12)
                 .ToListAsync());
         }
 
