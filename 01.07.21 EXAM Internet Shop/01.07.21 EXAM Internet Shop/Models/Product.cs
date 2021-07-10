@@ -17,7 +17,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Display(Name = "Name")]
         [Required(ErrorMessage = "Enter a name of product")]
         [DataType(DataType.Text)]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Incorrect length")]
+        [MinLength(10)]
         public string Name { get; set; }
 
         [Display(Name = "Content")]

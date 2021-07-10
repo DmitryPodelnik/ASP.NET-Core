@@ -4,28 +4,30 @@
     ViewData["Title"] = "AllProducts";
 }
 
-<div class="d-flex align-content-around flex-wrap">
-    @foreach (var product in Model)
-    {
-    // <div class="row">
-            <div class="card" style="width: 18rem;">
+<div>
+
+    @{await Html.RenderPartialAsync("LeftAside");}
+
+    <div class="d-flex align-content-around flex-wrap" style="margin-left: 40px;">
+
+        @foreach (var product in Model)
+        {
+            //<div class="row">
+            <div class="card" style="width: 20rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
                 @using (Html.BeginForm())
                 {
-                    <img src="~/images/1.jpg" class="card-img-top" alt="image">
+                    <img src=~/images/Products/@product.Image class="card-img-top" alt="image">
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>
-                        <p class="card-text">@product.Content</p>
+                        @*<p class="card-text">@product.Name</p>*@<p class="card-text"></p><p class="card-text"></p>
                         <input type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Product" value="More details" />
                         @Html.Hidden("product", $"1")
                         <div class="btn btn-success disabled">Price: $@product.Price</div>
                     </div>
                 }
             </div>
-
-       // </div>
-     }
+        }
+    </div>
 </div>
-
-@{await Html.RenderPartialAsync("LeftAside");}
 
 

@@ -74,7 +74,7 @@ namespace _01._07._21_EXAM_Online_Store
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Products}/{action=AllProducts}/{id?}");
             });
         }
     }

@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - official site the most ...</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Products.css" />
     <link rel="stylesheet" href="~/css/leftAside.css" />
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -24,7 +25,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow" id="headerNav">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="navbar-brand" asp-area="" asp-controller="Products" asp-action="AllProducts">
                     <img src="~/images/mainlogo.png" height="40" width="250" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -41,7 +42,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Products" asp-action="AllProducts">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Products" asp-action="AllProducts">All Products</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " asp-area="" asp-controller="Authorization" asp-action="Create">Privacy</a>
@@ -87,7 +88,7 @@
         </div>
     </section>
 
-    <div id="mainContainer" class="container">
+    <div id="mainContainer" class="container" style="margin-left: 146px">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
