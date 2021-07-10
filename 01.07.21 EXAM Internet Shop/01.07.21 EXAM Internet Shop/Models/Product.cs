@@ -41,5 +41,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [DataType(DataType.Text)]
         [MinLength(10)]
         public string Seller { get; set; }
+
+        public int? CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual Category Category { get; set; }
     }
 }

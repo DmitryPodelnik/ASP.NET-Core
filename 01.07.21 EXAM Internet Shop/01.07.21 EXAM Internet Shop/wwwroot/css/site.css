@@ -157,3 +157,12 @@ input[type="checkbox"].input-validation-error {
 .field-validation-valid {
     display: none;
 }
+
+#cartButton {
+    background: none;
+    border: none;
+}
+
+#cartButton:hover {
+    background-color: grey;
+}

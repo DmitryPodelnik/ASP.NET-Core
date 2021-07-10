@@ -21,16 +21,17 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
         // GET: Products
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> AllProducts()
         {
             return View(await _context.Products.ToListAsync());
         }
 
-        // GET: Products
         [HttpGet]
-        public async Task<IActionResult> AllProducts()
+        public async Task<ActionResult<IEnumerable<Product>>> GetProductsByCategory(int? category)
         {
-            return View(await _context.Products.ToListAsync());
+            return await _context.Products
+                                    .Where(p => p.CategoryId == category)
+                                    .ToListAsync();
         }
 
         // GET: Products/Details/5
@@ -49,12 +50,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             }
 
             return View(product);
-        }
-
-        // GET: Products/Create
-        public IActionResult Create()
-        {
-            return View();
         }
 
         // POST: Products/Create
