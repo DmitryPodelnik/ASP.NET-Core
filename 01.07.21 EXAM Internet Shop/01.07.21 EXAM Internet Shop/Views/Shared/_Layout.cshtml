@@ -35,13 +35,11 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <div class="input-group">
-                                <form asp-action="SearchProductsByName" asp-controller="Products" method="post">
+                                <form asp-action="SearchProductsByName" asp-controller="Products" method="post" class="input-group">
                                     <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                                            aria-describedby="search-addon" size="40" id="nameProduct" name="nameProduct" />
                                     <button type="submit" id="searchButton" class="btn btn-success" style="margin-left: -5px; border-left: 0.1px solid black">search</button>
                                 </form>
-                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Products" asp-action="AllProducts">All Products</a>
