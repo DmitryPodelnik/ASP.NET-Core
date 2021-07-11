@@ -60,12 +60,18 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult RegisterUser()
+        {
+            return View();
+        }
+
         // POST: Authorization/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddUser([Bind("Id,Username,FirstName,LastName,Password,Email")] User user)
+        public async Task<IActionResult> RegisterUser([Bind("Id,Username,FirstName,LastName,Password,Email")] User user)
         {
             if (ModelState.IsValid)
             {
