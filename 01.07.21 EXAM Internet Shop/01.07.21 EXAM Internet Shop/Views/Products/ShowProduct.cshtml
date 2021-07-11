@@ -18,18 +18,18 @@
                 </div>
             </div>
         </div>
-        <div class="col" style="width: 50px">
-            <h1 class="display-5 text-danger">@Model.Price</h1>
-        </div>
          <div class="col">
             <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
-                <div class="card-header">Price: $@Model.Seller</div>
+                <div class="card-header text-danger font-weight-bold">Price: $@Model.Price</div>
                  <div class="card-body">
-                    <h5 class="card-title">Warning card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title">Seller: @Model.Seller</h5>
+                    <p class="card-text">
+                        Currently, the use of bonuses for this product is not available.
+                        
+                    </p>
                  </div>
             </div>
-            <input type="submit" class="btn btn-success" value="Buy">
+            <input type="submit" class="btn btn-success" value="Buy $@Model.Price">
          </div>
     </div>
 </div>
@@ -99,19 +99,19 @@
         </div>
     </div>
     <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
+        <h2 class="accordion-header" id="flush-headingFour">
             <button class="accordion-button collapsed"
                     type="button"
                     data-mdb-toggle="collapse"
-                    data-mdb-target="#flush-collapseThree"
+                    data-mdb-target="#flush-collapseFour"
                     aria-expanded="false"
-                    aria-controls="flush-collapseThree">
+                    aria-controls="flush-collapseFour">
                 Accessories
             </button>
         </h2>
-        <div id="flush-collapseThree"
+        <div id="flush-collapseFour"
              class="accordion-collapse collapse"
-             aria-labelledby="flush-headingThree"
+             aria-labelledby="flush-headingFour"
              data-mdb-parent="#accordionFlushExample">
             <div class="accordion-body">
                 @Model.Name

@@ -161,6 +161,7 @@ input[type="checkbox"].input-validation-error {
 #cartButton {
     background: none;
     border: none;
+    position: relative;
 }
 
 #cartButton:hover {

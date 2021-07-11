@@ -61,7 +61,17 @@
                         <li class="nav-item">
                             <button id="cartButton">
                                 <img class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" src="~/images/cart2.png" width="40" height="40" />
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
                             </button>
+                            <script>
+                                let cart = document.getElementById("cartButton");
+                                cart.addEventListener("click", () => {
+
+                                });
+                            </script>
                         </li>
                     </ul>
                 </div>
