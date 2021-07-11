@@ -61,7 +61,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddUser([Bind("Id,Username,Password,PasswordConfirmation,Email")] User user)
+        public async Task<IActionResult> AddUser([Bind("Id,Username,Password,Email")] User user)
         {
             if (ModelState.IsValid)
             {

@@ -1,5 +1,6 @@
 ﻿using _01._07._21_EXAM_Internet_Shop.Models;
 using _01._07._21_EXAM_Internet_Shop.Models.Logs;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +35,21 @@ namespace _01._07._21_EXAM_Online_Store
             // добавляем контекст MobileContext в качестве сервиса в приложение
             services.AddDbContext<OnlineStoreDbContext>(options =>
                 options.UseSqlServer(connection));
+
+            //services
+            //    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            //    .AddCookie(options => {
+            //        options.LoginPath = new PathString("/Account/Login");
+            //        options.AccessDeniedPath = new PathString("/Account/Login");
+            //    });
+
+            //services.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("OnlyForUkraine", policy =>
+            //    {
+            //        policy.RequireClaim("country", "Ukraine");
+            //    });
+            //});
 
             services.AddControllersWithViews();
         }
