@@ -38,6 +38,14 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         }
 
         [HttpPost]
+        public async Task<ActionResult<Product>> ShowProduct(int product)
+        {
+            var prod = await _context.Products.FirstOrDefaultAsync(p => p.Id == product);
+
+            return View(prod);
+        }
+
+        [HttpPost]
         public async Task<IActionResult> SearchProductsByName(string nameProduct)
         {
             var items = await _context.Products

@@ -14,28 +14,28 @@ namespace _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations
             builder.HasData(
               new Product[]
               {
-                  new Product { Id = 1, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 1, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1500, Image = "1.jpg", Seller = "ROZETKA", CategoryId = 1 },
-                  new Product { Id = 2, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 2, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1800, Image = "2.jpg", Seller = "ROZETKA", CategoryId = 1},
-                  new Product { Id = 3, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 3, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1300, Image = "3.jpg", Seller = "ROZETKA", CategoryId = 2 },
-                  new Product { Id = 4, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 4, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
@@ -54,28 +54,28 @@ namespace _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations
                                 " Благодаря этой невероятной легкости ноутбука вы больше не будете привязаны к офису. " +
                                 "Время автономной работы достигает 18.3 часа, поэтому вы можете брать ноутбук с собой куда угодно.",
                                 Price = 1500, Image = "6.jpg", Seller = "ROZETKA", CategoryId = 3 },
-                   new Product { Id = 7, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                   new Product { Id = 7, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1500, Image = "1.jpg", Seller = "ROZETKA", CategoryId = 4 },
-                  new Product { Id = 8, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 8, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1800, Image = "2.jpg", Seller = "ROZETKA", CategoryId = 4},
-                  new Product { Id = 9, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 9, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1300, Image = "3.jpg", Seller = "ROZETKA", CategoryId = 5 },
-                  new Product { Id = 10, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 10, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
@@ -94,28 +94,28 @@ namespace _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations
                                 " Благодаря этой невероятной легкости ноутбука вы больше не будете привязаны к офису. " +
                                 "Время автономной работы достигает 18.3 часа, поэтому вы можете брать ноутбук с собой куда угодно.",
                                 Price = 1500, Image = "6.jpg", Seller = "ROZETKA", CategoryId = 6 },
-                   new Product { Id = 13, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                   new Product { Id = 13, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1500, Image = "1.jpg", Seller = "ROZETKA", CategoryId = 7 },
-                  new Product { Id = 14, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 14, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1800, Image = "2.jpg", Seller = "ROZETKA", CategoryId = 7},
-                  new Product { Id = 15, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 15, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1300, Image = "3.jpg", Seller = "ROZETKA", CategoryId = 8 },
-                  new Product { Id = 16, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 16, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
@@ -134,28 +134,28 @@ namespace _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations
                                 " Благодаря этой невероятной легкости ноутбука вы больше не будете привязаны к офису. " +
                                 "Время автономной работы достигает 18.3 часа, поэтому вы можете брать ноутбук с собой куда угодно.",
                                 Price = 1500, Image = "6.jpg", Seller = "ROZETKA", CategoryId = 2 },
-                   new Product { Id = 19, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                   new Product { Id = 19, Name = "Laptop Asus ROG Strix G15 G512LI-HN087 (90NR0381-M01330) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1500, Image = "1.jpg", Seller = "ROZETKA", CategoryId = 3 },
-                  new Product { Id = 20, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 20, Name = "Laptop Asus VivoBook X712FA-BX665 (90NB0L61-M15620) Transparent Silver", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1800, Image = "2.jpg", Seller = "ROZETKA", CategoryId = 4 },
-                  new Product { Id = 21, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 21, Name = "Laptop Asus ZenBook Flip UX363JA-EM120T (90NB0QT1-M04710) Pine Grey", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +
                                 "мультипроцессоров. Они поддерживают трассировку лучей в режиме реального времени и передовые " +
                                 "технологии искусственного интеллекта.",
                                 Price = 1300, Image = "3.jpg", Seller = "ROZETKA", CategoryId = 8 },
-                  new Product { Id = 22, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии"
+                  new Product { Id = 22, Name = "Laptop Asus ROG Strix G15 G513QE-HN046 (90NR05I1-M01570) Original Black", Content = "Видеокарта NVIDIA Geforce RTX 30-й серии."
                                 + "Используя графический процессор с микроархитектурой Ampere, представляющей 2-ое поколение " +
                                 "чипов NVIDIA RTX, видеокарты GeForce RTX 30-й серии готовы обеспечить фантастическую игровую " +
                                 "производительность за счет улучшенных вычислительных блоков: RT-ядер, тензорных ядер и потоковых " +

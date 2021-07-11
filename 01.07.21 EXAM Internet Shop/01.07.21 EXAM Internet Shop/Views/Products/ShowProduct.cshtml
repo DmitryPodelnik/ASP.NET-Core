@@ -1,0 +1,123 @@
+﻿@using _01._07._21_EXAM_Internet_Shop.Models
+@model Product
+@{
+    ViewData["Title"] = "Product";
+}
+
+<h1>@Model.Name</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 25rem;">
+                <img src="~/images/Products/@Model.Image" class="card-img-top" alt="@Model.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Name</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="width: 50px">
+            <h1 class="display-5 text-danger">@Model.Price</h1>
+        </div>
+         <div class="col">
+            <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Price: $@Model.Seller</div>
+                 <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 </div>
+            </div>
+            <input type="submit" class="btn btn-success" value="Buy">
+         </div>
+    </div>
+</div>
+
+<br />
+<hr />
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne">
+                Characteristics
+            </button>
+        </h2>
+        <div id="flush-collapseOne"
+             class="accordion-collapse collapse"
+             aria-labelledby="flush-headingOne"
+             data-mdb-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                @Model.Content
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo">
+                Comments
+            </button>
+        </h2>
+        <div id="flush-collapseTwo"
+             class="accordion-collapse collapse"
+             aria-labelledby="flush-headingTwo"
+             data-mdb-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                @Model.Content
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree">
+                About
+            </button>
+        </h2>
+        <div id="flush-collapseThree"
+             class="accordion-collapse collapse"
+             aria-labelledby="flush-headingThree"
+             data-mdb-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                @Model.Content
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree">
+                Accessories
+            </button>
+        </h2>
+        <div id="flush-collapseThree"
+             class="accordion-collapse collapse"
+             aria-labelledby="flush-headingThree"
+             data-mdb-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                @Model.Name
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
