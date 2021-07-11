@@ -38,5 +38,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [DataType(DataType.EmailAddress)]
         [StringLength(320, ErrorMessage = "Incorrect length")]
         public string Email { get; set; }
+
+        public int? RoleId { get; set; }
+        [ForeignKey("RoleId")]
+        public Role Role { get; set; }
     }
 }

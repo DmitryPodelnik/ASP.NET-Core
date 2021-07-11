@@ -172,19 +172,5 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
             return View();
         }
-
-        [HttpGet]
-        public IActionResult Registration()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Registration(User user)
-        {
-            
-
-            return View(user);
-        }
     }
 }
