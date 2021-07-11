@@ -20,6 +20,18 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Incorrect length")]
         public string Username { get; set; }
 
+        [Display(Name = "Firstname")]
+        [Required(ErrorMessage = "Enter an firstname")]
+        [DataType(DataType.Text)]
+        [StringLength(50, MinimumLength = 1, ErrorMessage = "Incorrect length")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Lastname")]
+        [Required(ErrorMessage = "Enter an lastname")]
+        [DataType(DataType.Text)]
+        [StringLength(50, MinimumLength = 1, ErrorMessage = "Incorrect length")]
+        public string LastName { get; set; }
+
         [Display(Name = "Password")]
         [Required(ErrorMessage = "Enter a password")]
         [DataType(DataType.Password)]
@@ -38,6 +50,12 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [DataType(DataType.EmailAddress)]
         [StringLength(320, ErrorMessage = "Incorrect length")]
         public string Email { get; set; }
+
+
+        [Required]
+        [DataType(DataType.Text)]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Incorrect length")]
+        public string Country { get; set; }
 
         public int? RoleId { get; set; }
         [ForeignKey("RoleId")]

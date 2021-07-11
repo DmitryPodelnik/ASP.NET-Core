@@ -1226,3 +1226,8 @@ Hosting environment: Development
 Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
 The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
 The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
