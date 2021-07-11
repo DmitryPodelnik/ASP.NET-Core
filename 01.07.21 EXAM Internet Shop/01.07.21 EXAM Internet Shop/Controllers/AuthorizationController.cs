@@ -9,6 +9,8 @@ using _01._07._21_EXAM_Internet_Shop.Models;
 using _01._07._21_EXAM_Online_Store;
 using System.IO;
 using Microsoft.Extensions.Logging;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace _01._07._21_EXAM_Internet_Shop.Controllers
 {
@@ -17,6 +19,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         private readonly OnlineStoreDbContext _context;
         //private readonly ILogger _logger;
         private readonly ILogger _logger = Log.CreateLogger<AuthorizationController>();
+        private SHA256Managed sha256 = new();
 
         public AuthorizationController(OnlineStoreDbContext context)
         {
@@ -58,13 +61,15 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Username,Password,Email")] User user)
+        public async Task<IActionResult> AddUser([Bind("Id,Username,Password,PasswordConfirmation,Email")] User user)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(user);
+                user.Password = Convert.ToBase64String(sha256.ComputeHash(Encoding.UTF8.GetBytes(user.Password)));
+
+                await _context.Users.AddAsync(user);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("AllProducts", "Products");
             }
             return View(user);
         }

@@ -30,7 +30,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Display(Name = "Password Confirmation")]
         //[Required(ErrorMessage = "Incorrect password")]
         [DataType(DataType.Password)]
-        [StringLength(50, MinimumLength = 8, ErrorMessage = "Incorrect length")]
         [Compare("Password", ErrorMessage = "Passwords are not equal")]
         public string PasswordConfirmation { get; set; }
 

@@ -58,8 +58,8 @@ namespace _01._07._21_EXAM_Online_Store
 
             //app.Run(async (context) =>
             //{
-                //logger.LogInformation("Processing request {0}", context.Request.Path);
-                //await context.Response.WriteAsync("Hello World!");
+            //logger.LogInformation("Processing request {0}", context.Request.Path);
+            //await context.Response.WriteAsync("Hello World!");
             //});
 
             app.UseHttpsRedirection();

@@ -9,11 +9,11 @@ namespace _01._07._21_EXAM_Online_Store
         public OnlineStoreDbContext(DbContextOptions<OnlineStoreDbContext> options) : base(options)
         {
             // Если такая БД уже есть, то удаляем ее
-            if (Database.CanConnect())
-                Database.EnsureDeleted();
+            //if (Database.CanConnect())
+                //Database.EnsureDeleted();
 
             // Создаем БД
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -31,7 +31,7 @@ namespace _01._07._21_EXAM_Online_Store
         }
 
         public DbSet<User> Users { get; set; }
-
+        public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
     }
 }

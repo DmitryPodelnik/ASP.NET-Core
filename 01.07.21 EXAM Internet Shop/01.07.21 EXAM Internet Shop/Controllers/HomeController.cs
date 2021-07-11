@@ -13,7 +13,7 @@ namespace _01._07._21_EXAM_Online_Store.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger _logger = Log.CreateLogger<HomeController>();
+        //private readonly ILogger _logger = Log.CreateLogger<HomeController>();
 
         public HomeController()
         {
