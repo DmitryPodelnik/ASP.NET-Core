@@ -65,11 +65,17 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                user.Password = Convert.ToBase64String(sha256.ComputeHash(Encoding.UTF8.GetBytes(user.Password)));
+                var existedUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == user.Username || u.Email == user.Email);
 
-                await _context.Users.AddAsync(user);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("AllProducts", "Products");
+                if (existedUser == null)
+                {
+                    user.Password = Convert.ToBase64String(sha256.ComputeHash(Encoding.UTF8.GetBytes(user.Password)));
+                    user.RoleId = 1;
+
+                    await _context.Users.AddAsync(user);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("AllProducts", "Products");
+                }
             }
             return View(user);
         }
