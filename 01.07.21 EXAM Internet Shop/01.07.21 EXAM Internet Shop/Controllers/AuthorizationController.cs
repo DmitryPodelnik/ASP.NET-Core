@@ -86,6 +86,12 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(user);
         }
 
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)

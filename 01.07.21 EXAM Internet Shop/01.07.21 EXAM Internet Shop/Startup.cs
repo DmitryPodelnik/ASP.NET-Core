@@ -36,20 +36,21 @@ namespace _01._07._21_EXAM_Online_Store
             services.AddDbContext<OnlineStoreDbContext>(options =>
                 options.UseSqlServer(connection));
 
-            //services
-            //    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            //    .AddCookie(options => {
-            //        options.LoginPath = new PathString("/Account/Login");
-            //        options.AccessDeniedPath = new PathString("/Account/Login");
-            //    });
+            services
+                .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = new PathString("/Account/Login");
+                    options.AccessDeniedPath = new PathString("/Account/Login");
+                });
 
-            //services.AddAuthorization(options =>
-            //{
-            //    options.AddPolicy("OnlyForUkraine", policy =>
-            //    {
-            //        policy.RequireClaim("country", "Ukraine");
-            //    });
-            //});
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("OnlyForUkraine", policy =>
+                {
+                    policy.RequireClaim("country", "Ukraine");
+                });
+            });
 
             services.AddControllersWithViews();
         }
