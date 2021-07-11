@@ -1037,3 +1037,74 @@ Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 
 Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+An error occurred using the connection to database 'OnlineStore' on server '(local)'.
+An unhandled exception has occurred while executing the request.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.

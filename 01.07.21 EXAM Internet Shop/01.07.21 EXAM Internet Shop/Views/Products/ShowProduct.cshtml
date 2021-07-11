@@ -1,7 +1,7 @@
 ﻿@using _01._07._21_EXAM_Internet_Shop.Models
 @model Product
 @{
-    ViewData["Title"] = "Product";
+    ViewData["Title"] = Model.Name.Substring(0, 15);
 }
 
 <h1>@Model.Name</h1>
