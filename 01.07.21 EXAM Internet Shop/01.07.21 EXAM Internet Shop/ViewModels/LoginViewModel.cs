@@ -8,12 +8,16 @@ namespace _01._07._21_EXAM_Internet_Shop.ViewModels
 {
     public class LoginViewModel
     {
-        [Required]
+        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Enter an email")]
         [DataType(DataType.EmailAddress)]
+        [StringLength(320, ErrorMessage = "Incorrect length")]
         public string Email { get; set; }
 
-        [Required]
+        [Display(Name = "Password")]
+        [Required(ErrorMessage = "Enter a password")]
         [DataType(DataType.Password)]
+        [StringLength(50, MinimumLength = 8, ErrorMessage = "Incorrect length")]
         public string Password { get; set; }
     }
 }
