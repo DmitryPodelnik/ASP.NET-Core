@@ -15,19 +15,19 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public int Id { get; set; }
 
         [Display(Name = "Username")]
-        [Required(ErrorMessage = "Enter an username")]
+        [Required(ErrorMessage = "Enter a username")]
         [DataType(DataType.Text)]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Incorrect length")]
         public string Username { get; set; }
 
         [Display(Name = "Firstname")]
-        [Required(ErrorMessage = "Enter an firstname")]
+        [Required(ErrorMessage = "Enter a firstname")]
         [DataType(DataType.Text)]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Incorrect length")]
         public string FirstName { get; set; }
 
         [Display(Name = "Lastname")]
-        [Required(ErrorMessage = "Enter an lastname")]
+        [Required(ErrorMessage = "Enter a lastname")]
         [DataType(DataType.Text)]
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Incorrect length")]
         public string LastName { get; set; }
