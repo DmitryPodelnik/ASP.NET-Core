@@ -5,50 +5,16 @@
 }
 
 <!-- Cart Modal -->
-<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="cartModalLabel">Cart</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+<div id="cartModal">
+    <div>
+        <div class="align-text-bottom">
+            <div>
+                <h5 class="text-center">Cart is empty</h5>
+                <br />
+                <h6 class="text-center">But it's never too late to fix it :)</h6>
             </div>
-            <div class="modal-body">
-                @*@if (Model.Products.Count == 0)
-                {
-                    <h5 class="text-center">Cart is empty</h5>
-                    <br />
-                    <h6 class="text-center">But it's never too late to fix it :)</h6>
-                }
-                else
-                {
-                    @foreach (var item in Model.Products)
-                    {
-                        <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
-                            <img src=~/images/Products/@item.Image class="card-img-top" alt="image">
-                            <div class="card-body">
-                                <h6 class="card-title">@item.Name</h6>
-                                <input type="submit" asp-controller="" asp-action="" class="btn btn-success" value="Price: $@item.Price" />
-                            </div>
-                        </div>
-                    }
-                }*@
-                <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
-                    <img src=~/images/Products/1.jpg class="card-img-top" alt="image">
-                    <div class="card-body">
-                        <h6 class="card-title">23131</h6>
-                        <input type="submit" asp-controller="" asp-action="" class="btn btn-success" value="Price: $1200" />
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
-                    <img src=~/images/Products/2.jpg class="card-img-top" alt="image">
-                    <div class="card-body">
-                        <h6 class="card-title">321313213</h6>
-                        <input type="submit" asp-controller="" asp-action="" class="btn btn-success" value="Price: $1000" />
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-outline-success" data-dismiss="modal" aria-label="Close">Continue shopping</button>
+            <div class="justify-content-between text-center">
+                <a class="btn btn-outline-success" asp-area="" asp-controller="Products" asp-action="AllProducts">Continue shopping</a>
                 <button type="button" class="btn btn-outline-dark">Empty cart</button>
                 <a class="btn btn-success" asp-area="" asp-controller="Authorization" asp-action="RegisterUser">Checkout</a>
             </div>
