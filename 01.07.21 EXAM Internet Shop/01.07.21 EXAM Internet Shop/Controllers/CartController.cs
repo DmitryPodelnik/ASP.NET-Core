@@ -1,4 +1,5 @@
-﻿using _01._07._21_EXAM_Online_Store;
+﻿using _01._07._21_EXAM_Internet_Shop.Models;
+using _01._07._21_EXAM_Online_Store;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -36,6 +37,21 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             var products = await _context.Carts.FirstOrDefaultAsync(c => c.Id == 1);
 
             return View(products);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddProduct(Product product)
+        {
+            if (product != null)
+            {
+                Cart newCart = new();
+                newCart.Products.Add(product);
+
+                await _context.Carts.AddAsync(newCart);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("GetProducts", "Cart");
         }
     }
 }
