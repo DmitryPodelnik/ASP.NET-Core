@@ -56,9 +56,8 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 await _context.Carts.AddAsync(newCart);
                 await _context.SaveChangesAsync();
 
-                string g = HttpContext.Session.GetString("guid");
 
-                var cartd = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == g);
+                var cartd = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"] && c.tempId != null);
 
                 return RedirectToAction("GetProducts", "Cart", newCart);
             }
