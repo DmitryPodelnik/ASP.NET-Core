@@ -1,5 +1,6 @@
 ﻿using _01._07._21_EXAM_Internet_Shop.Models;
 using _01._07._21_EXAM_Online_Store;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -34,7 +35,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             //                                }
             //                                )
 
-            var products = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"].ToString());
+            var products = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"]);
 
             return View(products);
         }
@@ -55,14 +56,14 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 await _context.Carts.AddAsync(newCart);
                 await _context.SaveChangesAsync();
 
-                string g = Request.Cookies["guid"];
+                string g = HttpContext.Session.GetString("guid");
 
                 var cartd = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == g);
 
-                return RedirectToAction("AddProduct", "Cart", id);
+                return RedirectToAction("GetProducts", "Cart", newCart);
             }
-
-            var cart = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"].ToString());
+     
+            var cart = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"]);
             cart.Products.Add(product);
 
             _context.Carts.Update(cart);

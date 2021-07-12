@@ -36,9 +36,6 @@ namespace _01._07._21_EXAM_Online_Store
             services.AddDbContext<OnlineStoreDbContext>(options =>
                 options.UseSqlServer(connection));
 
-            services.AddDistributedMemoryCache();
-            services.AddSession();
-
             services
                 .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
@@ -82,7 +79,6 @@ namespace _01._07._21_EXAM_Online_Store
             //await context.Response.WriteAsync("Hello World!");
             //});
 
-            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
