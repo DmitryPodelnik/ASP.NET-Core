@@ -36,12 +36,15 @@ namespace _01._07._21_EXAM_Online_Store
             services.AddDbContext<OnlineStoreDbContext>(options =>
                 options.UseSqlServer(connection));
 
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
             services
                 .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
-                    options.LoginPath = new PathString("/Account/Login");
-                    options.AccessDeniedPath = new PathString("/Account/Login");
+                    options.LoginPath = new PathString("/Authorization/Login");
+                    options.AccessDeniedPath = new PathString("/Authorization/Login");
                 });
 
             services.AddAuthorization(options =>
@@ -79,6 +82,7 @@ namespace _01._07._21_EXAM_Online_Store
             //await context.Response.WriteAsync("Hello World!");
             //});
 
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

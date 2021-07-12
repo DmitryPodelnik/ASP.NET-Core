@@ -34,7 +34,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             //                                }
             //                                )
 
-            var products = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["GUID"]);
+            var products = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"].ToString());
 
             return View(products);
         }
@@ -45,20 +45,24 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
             var guid = Guid.NewGuid().ToString();
 
-            if (Request.Cookies["GUID"] == null)
+            if (Request.Cookies["guid"] == null)
             {
                 Cart newCart = new();
                 newCart.Products.Add(product);
                 newCart.tempId = guid;
-                Response.Cookies.Append("GUID", guid);
+                Response.Cookies.Append("guid", guid);
 
                 await _context.Carts.AddAsync(newCart);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction("GetProducts", "Cart", newCart);
+                string g = Request.Cookies["guid"];
+
+                var cartd = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == g);
+
+                return RedirectToAction("AddProduct", "Cart", id);
             }
 
-            var cart = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["GUID"]);
+            var cart = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"].ToString());
             cart.Products.Add(product);
 
             _context.Carts.Update(cart);
