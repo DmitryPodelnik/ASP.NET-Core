@@ -32,13 +32,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Products" asp-action="AllProducts">All Products</a>
+                            <a class="nav-link" asp-area="" asp-controller="Products" asp-action="AllProducts">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-controller="Authorization" asp-action="Create">Privacy</a>
+                            <a class="nav-link " asp-area="" asp-controller="Authorization" asp-action="Create">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">Current orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">Orders history</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-1 justify-content-end">
@@ -54,7 +60,7 @@
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="" asp-action="">Logout</a>
+                                <a class="nav-link" asp-area="" asp-controller="Authorization" asp-action="Logout">Logout</a>
                             </li>
                         }
                     </ul>
