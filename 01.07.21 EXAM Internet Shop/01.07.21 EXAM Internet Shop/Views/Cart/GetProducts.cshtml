@@ -9,9 +9,25 @@
     <div>
         <div class="align-text-bottom">
             <div>
-                <h5 class="text-center">Cart is empty</h5>
-                <br />
-                <h6 class="text-center">But it's never too late to fix it :)</h6>
+                @if (Model.Products.Count == 0)
+                {
+                    <h5 class="text-center">Cart is empty</h5>
+                    <br />
+                    <h6 class="text-center">But it's never too late to fix it :)</h6>
+                }
+                else
+                {
+                    @foreach (var item in Model.Products)
+                    {
+                        <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
+                            <img src=~/images/Products/@item.Image class="card-img-top" alt="image">
+                            <div class="card-body">
+                                <h6 class="card-title">@item.Name</h6>
+                                <input type="submit" asp-controller="" asp-action="" class="btn btn-success" value="Price: $@item.Price" />
+                            </div>
+                        </div>
+                    }
+                }
             </div>
             <div class="justify-content-between text-center">
                 <a class="btn btn-outline-success" asp-area="" asp-controller="Products" asp-action="AllProducts">Continue shopping</a>

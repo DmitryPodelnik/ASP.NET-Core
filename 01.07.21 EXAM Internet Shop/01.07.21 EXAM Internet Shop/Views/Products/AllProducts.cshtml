@@ -13,14 +13,14 @@
         @foreach (var product in Model)
         {
             <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
-                @using (Html.BeginForm(FormMethod.Post))
+                @using (Html.BeginForm("ShowProduct", "Products", FormMethod.Post))
                 {
                     <img src=~/images/Products/@product.Image class="card-img-top" alt="image">
                     <div class="card-body">
                         <h6 class="card-title">@product.Name</h6>
                         <input type="submit" class="btn btn-primary" asp-controller="Products" asp-action="ShowProduct" value="More details" />
                         @Html.Hidden("product", product.Id)
-                        <input type="submit" asp-controller="Cart" asp-action="AddProduct" asp-route-product="@product" class="btn btn-success" value="Price: $@product.Price" />
+                        <input type="submit" asp-controller="Cart" asp-action="AddProduct" asp-route-id="@product.Id" class="btn btn-success" value="Price: $@product.Price" />
                     </div>
                 }
             </div>

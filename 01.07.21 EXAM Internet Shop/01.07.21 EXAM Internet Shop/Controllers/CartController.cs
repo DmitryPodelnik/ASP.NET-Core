@@ -34,24 +34,37 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             //                                }
             //                                )
 
-            var products = await _context.Carts.FirstOrDefaultAsync(c => c.Id == 1);
+            var products = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["GUID"]);
 
             return View(products);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddProduct(Product product)
+        public async Task<IActionResult> AddProduct(int id)
         {
-            if (product != null)
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+            var guid = Guid.NewGuid().ToString();
+
+            if (Request.Cookies["GUID"] == null)
             {
                 Cart newCart = new();
                 newCart.Products.Add(product);
+                newCart.tempId = guid;
+                Response.Cookies.Append("GUID", guid);
 
                 await _context.Carts.AddAsync(newCart);
                 await _context.SaveChangesAsync();
+
+                return RedirectToAction("GetProducts", "Cart", newCart);
             }
 
-            return RedirectToAction("GetProducts", "Cart");
+            var cart = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["GUID"]);
+            cart.Products.Add(product);
+
+            _context.Carts.Update(cart);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("GetProducts", "Cart", cart);
         }
     }
 }
