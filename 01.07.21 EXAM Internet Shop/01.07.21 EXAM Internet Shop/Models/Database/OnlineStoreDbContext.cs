@@ -35,5 +35,6 @@ namespace _01._07._21_EXAM_Online_Store
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Cart> Carts { get; set; }
     }
 }
