@@ -60,7 +60,8 @@
                             <a class="nav-link" asp-area="" asp-controller="Authorization" asp-action="RegisterUser">Registration</a>
                         </li>
                         <li class="nav-item">
-                            <a id="cartButton" data-toggle="modal" data-target="#cartModal" asp-area="" asp-controller="" asp-action="">
+                            @*<a asp-area="" asp-controller="Cart" asp-action="GetProducts" id="cartButton" data-toggle="modal" data-target="#cartModal" >*@
+                            <a asp-area="" asp-controller="Cart" asp-action="GetProducts" id="cartButton">
                                 <img class="nav-link" src="~/images/cart2.png" width="40" height="40" />
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                                     0
@@ -73,7 +74,7 @@
         </nav>
     </header>
 
-    @{await Html.RenderPartialAsync("Cart");}
+    @*@{await Html.RenderPartialAsync("Cart");}*@
 
     <!--Hamburger menu-->
     <section class="mb-3">

@@ -12,8 +12,13 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
     {
         private readonly OnlineStoreDbContext _context;
 
+        public CartController(OnlineStoreDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> GetProducts()
         {
 
             //var products = await _context.Carts
@@ -28,10 +33,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             //                                }
             //                                )
 
+            var products = await _context.Carts.FirstOrDefaultAsync(c => c.Id == 1);
 
-            return View(await _context.Carts.FirstOrDefaultAsync(c => c.Id == 1));
+            return View(products);
         }
-
-
     }
 }

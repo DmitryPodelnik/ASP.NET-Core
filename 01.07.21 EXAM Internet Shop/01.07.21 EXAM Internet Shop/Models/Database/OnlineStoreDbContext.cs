@@ -29,6 +29,7 @@ namespace _01._07._21_EXAM_Online_Store
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
+            modelBuilder.ApplyConfiguration(new CartConfiguration());
         }
 
         public DbSet<User> Users { get; set; }

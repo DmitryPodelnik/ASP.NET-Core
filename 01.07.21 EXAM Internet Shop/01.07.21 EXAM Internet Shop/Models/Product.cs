@@ -45,5 +45,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public int? CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         public virtual Category Category { get; set; }
+
+        //public List<Cart> Carts { get; set; } = new();
     }
 }
