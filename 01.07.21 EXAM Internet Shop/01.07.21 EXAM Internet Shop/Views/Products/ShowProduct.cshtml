@@ -18,19 +18,19 @@
                 </div>
             </div>
         </div>
-         <div class="col">
+        <div class="col">
             <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
                 <div class="card-header text-danger font-weight-bold">Price: $@Model.Price</div>
-                 <div class="card-body">
+                <div class="card-body">
                     <h5 class="card-title">Seller: @Model.Seller</h5>
                     <p class="card-text">
                         Currently, the use of bonuses for this product is not available.
-                        
+
                     </p>
-                 </div>
+                </div>
             </div>
-            <input type="submit" class="btn btn-success" value="Buy $@Model.Price">
-         </div>
+            <input type="submit" asp-controller="Cart" asp-action="AddProduct" asp-route-id="@Model.Id" class="btn btn-success" value="Buy $@Model.Price">
+        </div>
     </div>
 </div>
 
