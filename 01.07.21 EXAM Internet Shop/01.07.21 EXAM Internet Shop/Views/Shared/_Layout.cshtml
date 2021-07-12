@@ -48,6 +48,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
+                        @if (Context.User.Identity.IsAuthenticated && Context.User.IsInRole("admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link " asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                            </li>
+                        }
                     </ul>
                     <ul class="navbar-nav flex-grow-1 justify-content-end">
                         @if (!Context.User.Identity.IsAuthenticated)

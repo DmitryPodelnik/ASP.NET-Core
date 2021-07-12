@@ -21,7 +21,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations
                     new User { Id = 1,  Username = "dmitrypodelnik", Password = Convert.ToBase64String(sha256.ComputeHash(Encoding.UTF8.GetBytes("12341234qwe"))),
                                Email = "dmitrypodelnik.developer@gmail.com", RoleId = 1, FirstName = "Dmitry", LastName = "Podelnik", Country = "Ukraine" },
                     new User { Id = 2,  Username = "dmitrypodelnik2", Password = Convert.ToBase64String(sha256.ComputeHash(Encoding.UTF8.GetBytes("12341234qwe"))),
-                               Email = "dmitrypodelnik.developer@gmail.com", RoleId = 2, FirstName = "Dmitry", LastName = "Podelnik", Country = "Ukraine" },
+                               Email = "dmitrypodelnik.developer2@gmail.com", RoleId = 2, FirstName = "Dmitry", LastName = "Podelnik", Country = "Ukraine" },
               });
         }
     }
