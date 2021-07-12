@@ -26,22 +26,11 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow" id="headerNav">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Products" asp-action="AllProducts">
+                <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index">
                     <img src="~/images/mainlogo.png" height="40" width="250" />
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <form asp-action="SearchProductsByName" asp-controller="Products" method="post" class="input-group">
-                                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                                       aria-describedby="search-addon" size="40" id="nameProduct" name="nameProduct" />
-                                <button type="submit" id="searchButton" class="btn btn-success" style="margin-left: -5px; border-left: 0.1px solid black">search</button>
-                            </form>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Products" asp-action="AllProducts">All Products</a>
                         </li>
@@ -65,50 +54,15 @@
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link">Hello, @Context.User.Identity.Name</a>
-                                @*<pre class="nav-link">Hello, @Context.User.Identity.Name</pre>*@
+                                <a class="nav-link" asp-area="" asp-controller="" asp-action="">Logout</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Authorization" asp-action="Logout">Logout</a>
-                            </li>
-                            }
-                            <li class="nav-item">
-                                @*<a asp-area="" asp-controller="Cart" asp-action="GetProducts" id="cartButton" data-toggle="modal" data-target="#cartModal" >*@
-                                <a asp-area="" asp-controller="Cart" asp-action="GetProducts" id="cartButton">
-                                    <img class="nav-link" src="~/images/cart2.png" width="40" height="40" />
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                                        0
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
+                        }
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    @*@{await Html.RenderPartialAsync("Cart");}*@
-
-    <!--Hamburger menu-->
-    <section class="mb-3">
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler second-button btn-light" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#navbarToggleExternalContent10"
-                        aria-controls="navbarToggleExternalContent10" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
-                </button>
-            </div>
-        </nav>
-        <div class="collapse" id="navbarToggleExternalContent10">
-            <div class="bg-light shadow-3 p-4">
-                <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
-                <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
-                <button class="btn btn-link btn-block m-0">Link 3</button>
-            </div>
-        </div>
-    </section>
 
     <div id="mainContainer" class="container" style="margin-left: 200px">
         <main role="main" class="pb-3">

@@ -1,4 +1,4 @@
-﻿@model _01._07._21_EXAM_Internet_Shop.Models.User
+﻿@model _01._07._21_EXAM_Internet_Shop.ViewModels.LoginViewModel
 @{
     ViewData["Title"] = "Login";
 }
@@ -6,9 +6,9 @@
 <form asp-action="Login" asp-antiforgery="true">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="mb-3">
-        <label asp-for="Username" class="form-label">Username</label>
-        <input asp-for="Username" type="text" class="form-control">
-        <span asp-validation-for="Username"></span>
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" type="text" class="form-control">
+        <span asp-validation-for="Email"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Password" class="form-label">Password</label>

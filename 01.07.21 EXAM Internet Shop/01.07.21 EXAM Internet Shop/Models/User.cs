@@ -17,7 +17,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Display(Name = "Username")]
         [Required(ErrorMessage = "Enter a username")]
         [DataType(DataType.Text)]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Incorrect length")]
+        [StringLength(25, MinimumLength = 3, ErrorMessage = "Incorrect length")]
         public string Username { get; set; }
 
         [Display(Name = "Firstname")]
@@ -60,5 +60,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public int? RoleId { get; set; }
         [ForeignKey("RoleId")]
         public Role Role { get; set; }
+
+        public Cart Cart { get; set; }
     }
 }
