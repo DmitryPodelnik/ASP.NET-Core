@@ -1,8 +1,23 @@
-﻿
+﻿@using _01._07._21_EXAM_Internet_Shop.Models
+@model List<Product>
 @{
     ViewData["Title"] = "GetProducts";
     Layout = "_AdminLayout";
 }
 
-<h1>GetProducts</h1>
+<div class="list-group">
+
+    <a class="btn btn-success" asp-area="" asp-controller="Admin" asp-action="">Add new category</a>
+
+    @foreach (var item in Model)
+    {
+        <div class="list-group-item list-group-item-action">
+            <h5 class="mb-1">@item.Name</h5>
+            <div class="d-flex w-100 justify-content-end">
+                <a class="btn btn-warning" asp-area="" asp-controller="Admin" asp-action="">Edit</a>
+                <a class="btn btn-danger" asp-area="" asp-controller="Admin" asp-action="">Delete</a>
+            </div>
+        </div>
+    }
+</div>
 
