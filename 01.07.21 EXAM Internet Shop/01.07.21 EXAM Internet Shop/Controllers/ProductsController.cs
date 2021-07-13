@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using _01._07._21_EXAM_Internet_Shop.Models;
 using _01._07._21_EXAM_Online_Store;
+using _01._07._21_EXAM_Internet_Shop.ViewModels;
 
 namespace _01._07._21_EXAM_Internet_Shop.Controllers
 {
@@ -31,10 +32,16 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> AllProducts(int skip = 0, int pages = 1)
         {
-            return View(await _context.Products
+            LeftSideViewModel items = new();
+
+            items.Products = await _context.Products
                 .Skip(skip * 12)
                 .Take(pages * 12)
-                .ToListAsync());
+                .ToListAsync();
+
+            items.Categories = await _context.Categories.ToListAsync();
+
+            return View(items);
         }
 
         [HttpPost]

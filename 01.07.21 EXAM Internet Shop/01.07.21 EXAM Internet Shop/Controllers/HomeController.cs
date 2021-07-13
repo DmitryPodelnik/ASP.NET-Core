@@ -1,6 +1,7 @@
 ﻿using _01._07._21_EXAM_Internet_Shop.Models;
 using _01._07._21_EXAM_Online_Store.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,20 @@ namespace _01._07._21_EXAM_Online_Store.Controllers
     public class HomeController : Controller
     {
         //private readonly ILogger _logger = Log.CreateLogger<HomeController>();
+        private readonly OnlineStoreDbContext _context;
 
-        public HomeController()
+        public HomeController(OnlineStoreDbContext context)
         {
-            
+            _context = context;
         }
 
-        public IActionResult Index()
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var categories = await _context.Categories.ToListAsync();
+
+            return View(categories);
         }
 
         public ActionResult GetLeftAside()

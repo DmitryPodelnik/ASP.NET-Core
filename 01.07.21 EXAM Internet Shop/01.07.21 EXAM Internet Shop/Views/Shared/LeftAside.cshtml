@@ -1,62 +1,70 @@
-﻿@{
+﻿@using _01._07._21_EXAM_Internet_Shop.ViewModels
+@model List<LeftSideViewModel>
+@{
     <aside>
         <div class="col-2 sticky" style="padding: 0px" id="leftAside">
             <div class="list-group" id="list-tab" role="tablist">
-                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=1" role="tab" aria-controls="list-home">Laptops and PC</a>
+                @for (int i = 0; i < 1; i++)
+                {
+                    <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=@item.Categories" role="tab" aria-controls="list-home">@item.Name</a>
+                }
+
+
+                @*<a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=1" role="tab" aria-controls="list-home">Laptops and PC</a>
                 <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=2" role="tab" aria-controls="list-profile">Phones</a>
                 <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=3" role="tab" aria-controls="list-messages">Goods for gamers</a>
                 <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=4" role="tab" aria-controls="list-settings">Household products</a>
                 <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-home-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=5" role="tab" aria-controls="list-home">Household appliances</a>
                 <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-profile-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=6" role="tab" aria-controls="list-profile">Sports and hobbies</a>
                 <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-messages-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=7" role="tab" aria-controls="list-messages">Children's products</a>
-                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=8" role="tab" aria-controls="list-settings">Food</a>
+                <a style="padding-left: 50px" class="list-group-item list-group-item-action link-primary" id="list-settings-list" data-bs-toggle="list" href="/Products/GetProductsByCategory?category=8" role="tab" aria-controls="list-settings">Food</a>*@
             </div>
         </div>
     </aside>
     <script>
         "use strict"
 
-        (function () {
-            let a = document.querySelector('#leftAside'), b = null, P = 0;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
-            window.addEventListener('scroll', Ascroll, false);
-            document.body.addEventListener('scroll', Ascroll, false);
-            function Ascroll() {
-                if (b == null) {
-                    let Sa = getComputedStyle(a, ''), s = '';
-                    for (let i = 0; i < Sa.length; i++) {
-                        if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-                            s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
+            (function () {
+                let a = document.querySelector('#leftAside'), b = null, P = 0;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+                window.addEventListener('scroll', Ascroll, false);
+                document.body.addEventListener('scroll', Ascroll, false);
+                function Ascroll() {
+                    if (b == null) {
+                        let Sa = getComputedStyle(a, ''), s = '';
+                        for (let i = 0; i < Sa.length; i++) {
+                            if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+                                s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
+                            }
                         }
+                        b = document.createElement('div');
+                        b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+                        a.insertBefore(b, a.firstChild);
+                        let l = a.childNodes.length;
+                        for (let i = 1; i < l; i++) {
+                            b.appendChild(a.childNodes[1]);
+                        }
+                        a.style.height = b.getBoundingClientRect().height + 'px';
+                        a.style.padding = '0';
+                        a.style.border = '0';
                     }
-                    b = document.createElement('div');
-                    b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
-                    a.insertBefore(b, a.firstChild);
-                    let l = a.childNodes.length;
-                    for (let i = 1; i < l; i++) {
-                        b.appendChild(a.childNodes[1]);
-                    }
-                    a.style.height = b.getBoundingClientRect().height + 'px';
-                    a.style.padding = '0';
-                    a.style.border = '0';
-                }
-                let Ra = a.getBoundingClientRect(),
-                    R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('footer').getBoundingClientRect().top + 0);  // селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
-                if ((Ra.top - P) <= 0) {
-                    if ((Ra.top - P) <= R) {
-                        b.className = 'stop';
-                        b.style.top = - R + 'px';
+                    let Ra = a.getBoundingClientRect(),
+                        R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('footer').getBoundingClientRect().top + 0);  // селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
+                    if ((Ra.top - P) <= 0) {
+                        if ((Ra.top - P) <= R) {
+                            b.className = 'stop';
+                            b.style.top = - R + 'px';
+                        } else {
+                            b.className = 'sticky';
+                            b.style.top = P + 'px';
+                        }
                     } else {
-                        b.className = 'sticky';
-                        b.style.top = P + 'px';
+                        b.className = '';
+                        b.style.top = '';
                     }
-                } else {
-                    b.className = '';
-                    b.style.top = '';
+                    window.addEventListener('resize', function () {
+                        a.children[0].style.width = getComputedStyle(a, '').width
+                    }, false);
                 }
-                window.addEventListener('resize', function () {
-                    a.children[0].style.width = getComputedStyle(a, '').width
-                }, false);
-            }
-        })()
+            })()
     </script>
 }

@@ -1,6 +1,8 @@
-﻿@{
+﻿@using _01._07._21_EXAM_Internet_Shop.Models
+@model List<Category>
+@{
     ViewData["Title"] = "Online-Store PodelnikTM";
 }
 
-@{await Html.RenderPartialAsync("LeftAside");}
+@{await Html.RenderPartialAsync("LeftAside", Model);}
 
