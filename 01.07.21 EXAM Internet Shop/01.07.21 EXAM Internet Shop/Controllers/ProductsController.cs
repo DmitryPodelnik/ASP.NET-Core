@@ -56,7 +56,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         public async Task<IActionResult> SearchProductsByName(string nameProduct)
         {
             var items = await _context.Products
-                                    .Where(p => p.Name.Contains(nameProduct))
+                                    .Where(p => p.Name.ToLower().Contains(nameProduct.ToLower()))
                                     .ToListAsync();
 
             return View("AllProducts", items);
