@@ -1,4 +1,5 @@
-﻿using _01._07._21_EXAM_Online_Store;
+﻿using _01._07._21_EXAM_Internet_Shop.Models;
+using _01._07._21_EXAM_Online_Store;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -64,7 +65,28 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> AddCategory()
         {
-            return View(await _context.Users.ToListAsync());
+            return View();
+        }
+
+        [Route("addcategory")]
+        [HttpPost]
+        public async Task<IActionResult> AddCategory([Bind("Name")] Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                var existedCategory = await _context.Categories.FirstOrDefaultAsync(c => c.Name == category.Name);
+
+                if (existedCategory == null)
+                {
+                    await _context.Categories.AddAsync(category);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("GetCategories", "Admin");
+                }
+
+                ModelState.AddModelError("", "Email  or username is already exists!");
+            }
+
+            return View(category);
         }
     }
 }
