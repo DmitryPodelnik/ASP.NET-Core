@@ -15,7 +15,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
     public class AdminController : Controller
     {
         private readonly OnlineStoreDbContext _context;
-        private int? _editingCategory = null;
+        private int? _editingItem = null;
 
         public AdminController(OnlineStoreDbContext context)
         {
@@ -119,13 +119,41 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(category);
         }
 
+        [Route("adduser")]
+        [HttpGet]
+        public async Task<IActionResult> AddUser()
+        {
+            return View();
+        }
+
+        [Route("adduser")]
+        [HttpPost]
+        public async Task<IActionResult> AddUser(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var existedUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+
+                if (existedUser == null)
+                {
+                    await _context.Users.AddAsync(user);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("GetUsers", "Admin");
+                }
+
+                ModelState.AddModelError("", "User is already exists!");
+            }
+
+            return View(user);
+        }
+
         [Route("editcategory")]
         [HttpPost]
         public async Task<IActionResult> EditCategory([Bind("Name")] Category category)
         {
             if (ModelState.IsValid)
             {
-                var existedCategory = await _context.Categories.FirstOrDefaultAsync(c => c.Id == _editingCategory);
+                var existedCategory = await _context.Categories.FirstOrDefaultAsync(c => c.Id == _editingItem);
 
                 if (existedCategory != null)
                 {
@@ -134,7 +162,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
                     await _context.SaveChangesAsync();
 
-                    _editingCategory = null;
+                    _editingItem = null;
 
                     return RedirectToAction("GetCategories", "Admin");
                 }
@@ -149,16 +177,57 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> EditCategory(int? id)
         {
-            _editingCategory = id;
+            _editingItem = id;
 
             return View(await _context.Categories.FirstOrDefaultAsync(c => c.Id == id));
+        }
+
+        [Route("edituser")]
+        [HttpPost]
+        public async Task<IActionResult> EditUser(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var existedUser = await _context.Users.FirstOrDefaultAsync(c => c.Id == _editingItem);
+
+                if (existedUser != null)
+                {
+                    existedUser.FirstName = user.FirstName;
+                    existedUser.LastName = user.LastName;
+                    existedUser.Username = user.Username;
+                    existedUser.Email = user.Email;
+                    existedUser.Country = user.Country;
+                    existedUser.RoleId = user.RoleId;
+
+                    _context.Users.Update(existedUser);
+
+                    await _context.SaveChangesAsync();
+
+                    _editingItem = null;
+
+                    return RedirectToAction("GetUsers", "Admin");
+                }
+
+                ModelState.AddModelError("", "Error with editing user!");
+            }
+
+            return RedirectToAction("GetCategories", "Admin");
+        }
+
+        [Route("edituser/{id:int}")]
+        [HttpGet]
+        public async Task<IActionResult> EditUser(int? id)
+        {
+            _editingItem = id;
+
+            return View(await _context.Users.FirstOrDefaultAsync(u => u.Id == id));
         }
 
         [Route("editproduct/{id:int}")]
         [HttpGet]
         public async Task<IActionResult> EditProduct(int? id)
         {
-            _editingCategory = id;
+            _editingItem = id;
 
             return View(await _context.Products.FirstOrDefaultAsync(p => p.Id == id));
         }
@@ -169,7 +238,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                var existedProduct = await _context.Products.FirstOrDefaultAsync(c => c.Id == _editingCategory);
+                var existedProduct = await _context.Products.FirstOrDefaultAsync(c => c.Id == _editingItem);
 
                 if (existedProduct != null)
                 {
@@ -178,7 +247,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
                     await _context.SaveChangesAsync();
 
-                    _editingCategory = null;
+                    _editingItem = null;
 
                     return RedirectToAction("GetCategories", "Admin");
                 }
@@ -231,5 +300,25 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return RedirectToAction("GetProducts", "Admin");
         }
 
+        [Route("deleteuser")]
+        [HttpGet]
+        public async Task<IActionResult> DeleteUser(int? id)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+                if (user != null)
+                {
+                    _context.Users.Remove(user);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("GetUsers", "Admin");
+                }
+
+                ModelState.AddModelError("", "Error with deleting user!");
+            }
+
+            return RedirectToAction("GetUsers", "Admin");
+        }
     }
 }
