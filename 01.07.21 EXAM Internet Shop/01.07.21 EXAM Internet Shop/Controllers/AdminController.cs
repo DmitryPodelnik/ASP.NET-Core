@@ -154,6 +154,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View();
         }
 
+        [Route("deletecategory")]
         [HttpGet]
         public async Task<IActionResult> DeleteCategory(int? id)
         {
@@ -168,10 +169,31 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                     return RedirectToAction("GetCategories", "Admin");
                 }
 
-                ModelState.AddModelError("", "Email  or username is already exists!");
+                ModelState.AddModelError("", "Error with deleting category!");
             }
 
             return RedirectToAction("GetCategories", "Admin");
+        }
+
+        [Route("deleteproduct")]
+        [HttpGet]
+        public async Task<IActionResult> DeleteProduct(int? id)
+        {
+            if (ModelState.IsValid)
+            {
+                var product = await _context.Products.FirstOrDefaultAsync(c => c.Id == id);
+
+                if (product != null)
+                {
+                    _context.Products.Remove(product);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("GetProducts", "Admin");
+                }
+
+                ModelState.AddModelError("", "Error with deleting product!");
+            }
+
+            return RedirectToAction("GetProducts", "Admin");
         }
 
     }
