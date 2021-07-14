@@ -63,6 +63,34 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(await _context.Users.ToListAsync());
         }
 
+        [Route("addproduct")]
+        [HttpGet]
+        public async Task<IActionResult> AddProduct()
+        {
+            return View();
+        }
+
+        [Route("addproduct")]
+        [HttpPost]
+        public async Task<IActionResult> AddProduct(Product product) //[Bind("Name,Content,Image,Price,Seller")]
+        {
+            if (ModelState.IsValid)
+            {
+                var existedProduct = await _context.Products.FirstOrDefaultAsync(p => p.Code == product.Code);
+
+                if (existedProduct == null)
+                {
+                    await _context.Products.AddAsync(product);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("GetProducts", "Admin");
+                }
+
+                ModelState.AddModelError("", "Product is already exists!");
+            }
+
+            return View(product);
+        }
+
         [Route("addcategory")]
         [HttpGet]
         public async Task<IActionResult> AddCategory()

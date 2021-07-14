@@ -17,7 +17,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Display(Name = "Name")]
         [Required(ErrorMessage = "Enter a name of product")]
         [DataType(DataType.Text)]
-        [MinLength(10)]
+        [MinLength(3)]
         public string Name { get; set; }
 
         [Display(Name = "Content")]
@@ -39,8 +39,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Display(Name = "Seller")]
         [Required(ErrorMessage = "Enter a seller")]
         [DataType(DataType.Text)]
-        [MinLength(10)]
+        [MinLength(2)]
         public string Seller { get; set; }
+
+        [Required]
+        public int Code { get; set; }
 
         public int? CategoryId { get; set; }
         [ForeignKey("CategoryId")]
