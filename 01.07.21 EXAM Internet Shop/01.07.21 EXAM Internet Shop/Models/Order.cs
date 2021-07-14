@@ -22,7 +22,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public string Name { get; set; }
 
         [Display(Name = "Amount")]
-        [Required(ErrorMessage = "Enter an name")]
+        [Required(ErrorMessage = "Enter an amount")]
         public uint Amount { get; set; }
 
         [Display(Name = "Address")]
@@ -32,7 +32,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Display(Name = "Comments")]
         public string NoteContent { get; set; }
 
-        [Display(Name = "Seller")]
+        [Display(Name = "Customer")]
         public CustomerViewModel Customer { get; set; }
 
         [Display(Name = "Order Date")]
