@@ -59,5 +59,12 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         {
             return View(await _context.Users.ToListAsync());
         }
+
+        [Route("addcategory")]
+        [HttpGet]
+        public async Task<IActionResult> AddCategory()
+        {
+            return View(await _context.Users.ToListAsync());
+        }
     }
 }
