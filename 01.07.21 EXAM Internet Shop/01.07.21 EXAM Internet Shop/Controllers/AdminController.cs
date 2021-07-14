@@ -15,12 +15,14 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
     public class AdminController : Controller
     {
         private readonly OnlineStoreDbContext _context;
+        private int? _editingCategory = null;
 
         public AdminController(OnlineStoreDbContext context)
         {
             _context = context;
         }
 
+        [Route("")]
         public IActionResult Index()
         {
             return View();
@@ -83,10 +85,66 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                     return RedirectToAction("GetCategories", "Admin");
                 }
 
-                ModelState.AddModelError("", "Email  or username is already exists!");
+                ModelState.AddModelError("", "Category is already exists!");
             }
 
             return View(category);
         }
+
+        [Route("editcategory")]
+        [HttpPost]
+        public async Task<IActionResult> EditCategory([Bind("Name")] Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                var existedCategory = await _context.Categories.FirstOrDefaultAsync(c => c.Id == _editingCategory);
+
+                if (existedCategory != null)
+                {
+                    existedCategory.Name = category.Name;
+                    _context.Categories.Update(existedCategory);
+
+                    await _context.SaveChangesAsync();
+
+                    _editingCategory = null;
+
+                    return RedirectToAction("GetCategories", "Admin");
+                }
+
+                ModelState.AddModelError("", "Incorrect category name!");
+            }
+
+            return RedirectToAction("GetCategories", "Admin");
+        }
+
+        [Route("editcategory/{id:int}")]
+        [HttpGet]
+        public async Task<IActionResult> EditCategory(int? id)
+        {
+            _editingCategory = id;
+
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteCategory(int? id)
+        {
+            if (ModelState.IsValid)
+            {
+                var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
+
+                if (category != null)
+                {
+                    _context.Categories.Remove(category);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("GetCategories", "Admin");
+                }
+
+                ModelState.AddModelError("", "Email  or username is already exists!");
+            }
+
+            return RedirectToAction("GetCategories", "Admin");
+        }
+
     }
 }

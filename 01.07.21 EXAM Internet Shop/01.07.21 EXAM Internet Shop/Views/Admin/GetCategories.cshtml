@@ -14,8 +14,8 @@
         <div class="list-group-item list-group-item-action">
             <h5 class="mb-1">@item.Name</h5>
             <div class="d-flex w-100 justify-content-end">
-                <a class="btn btn-warning" asp-area="" asp-controller="Admin" asp-action="">Edit</a>
-                <a class="btn btn-danger" asp-area="" asp-controller="Admin" asp-action="">Delete</a>
+                <a class="btn btn-warning" asp-area="" asp-controller="Admin" asp-action="EditCategory" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-danger" asp-area="" asp-controller="Admin" asp-action="DeleteCategory" asp-route-id="@item.Id">Delete</a>
             </div>
         </div>
     }
