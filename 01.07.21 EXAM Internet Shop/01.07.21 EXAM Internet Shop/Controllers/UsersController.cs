@@ -36,9 +36,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> MyOrders()
         {
-            var orders = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
+            var orders = await _context.Orders.FirstOrDefaultAsync(o => o);
 
-            return View(orders);
+            return View();
         }
 
         private bool UserExists(int id)
