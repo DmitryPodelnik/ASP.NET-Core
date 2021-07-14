@@ -130,7 +130,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpPost]
         public async Task<IActionResult> AddUser(User user)
         {
-            var a = ModelState.Values;
             if (ModelState.IsValid) 
             {
                 var existedUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
@@ -212,7 +211,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 ModelState.AddModelError("", "Error with editing user!");
             }
 
-            return RedirectToAction("GetCategories", "Admin");
+            return RedirectToAction("GetUsers", "Admin");
         }
 
         [Route("edituser/{id:int}")]
