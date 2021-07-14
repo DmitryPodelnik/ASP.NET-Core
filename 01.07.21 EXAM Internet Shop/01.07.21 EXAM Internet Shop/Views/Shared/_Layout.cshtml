@@ -106,9 +106,10 @@
         </nav>
         <div class="collapse" id="navbarToggleExternalContent10">
             <div class="bg-light shadow-3 p-4">
-                <a class="btn btn-link btn-block border-bottom m-0" asp-area="" asp-controller="Users" asp-action="">My account</a>
-                <a class="btn btn-link btn-block border-bottom m-0">Link 2</a>
-                <a class="btn btn-link btn-block m-0">Link 3</a>
+                @if (Context.User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-link btn-block border-bottom m-0" asp-area="" asp-controller="Users" asp-action="MyAccount">My account</a>
+                }
             </div>
         </div>
     </section>

@@ -25,6 +25,14 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return View(await _context.Users.ToListAsync());
         }
 
+        [HttpGet]
+        public async Task<IActionResult> MyAccount()
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
+
+            return View(user);
+        }
+
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.Id == id);

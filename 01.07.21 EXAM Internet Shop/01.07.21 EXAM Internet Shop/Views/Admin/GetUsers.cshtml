@@ -15,6 +15,7 @@
             <h5 class="mb-1">@item.Username</h5>
             <h5 class="mb-1">@item.Email</h5>
             <div class="d-flex w-100 justify-content-end">
+                <a class="btn btn-warning" asp-area="" asp-controller="Admin" asp-action="ViewUser" asp-route-id="@item.Id">View</a>
                 <a class="btn btn-warning" asp-area="" asp-controller="Admin" asp-action="EditUser" asp-route-id="@item.Id">Edit</a>
                 <a class="btn btn-danger" asp-area="" asp-controller="Admin" asp-action="DeleteUser" asp-route-id="@item.Id">Delete</a>
             </div>
