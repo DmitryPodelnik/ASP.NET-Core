@@ -21,16 +21,16 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [MinLength(2)]
         public string Number { get; set; }
 
-        [Display(Name = "Address")]
-        [Required(ErrorMessage = "Enter an address")]
-        public Address Address { get; set; }
+        //[Display(Name = "Address")]
+        //[Required(ErrorMessage = "Enter an address")]
+        //public Address Address { get; set; }
 
         [Display(Name = "Comments")]
         [DataType(DataType.Text)]
         public string NoteContent { get; set; }
 
-        [Display(Name = "Customer")]
-        public CustomerViewModel Customer { get; set; }
+        //[Display(Name = "Customer")]
+        //public CustomerViewModel Customer { get; set; }
 
         [Display(Name = "Order Date")]
         [DataType(DataType.DateTime)]
