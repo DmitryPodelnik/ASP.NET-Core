@@ -14,19 +14,24 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Display(Name = "Название")]
+        [Display(Name = "Name")]
+        [Required(ErrorMessage = "Enter an name")]
+        [DataType(DataType.Text)]
+        [MinLength(2)]
         public string Name { get; set; }
 
-        [Display(Name = "Количество")]
+        [Display(Name = "Amount")]
+        [Required(ErrorMessage = "Enter an name")]
         public uint Amount { get; set; }
 
-        [Display(Name = "Адрес")]
+        [Display(Name = "Name")]
+        [Required(ErrorMessage = "Enter an name")]
         public Address Address { get; set; }
 
-        [Display(Name = "Содержимое записки")]
+        [Display(Name = "Comments")]
         public string NoteContent { get; set; }
 
-        [Display(Name = "Имя заказчика")]
+        [Display(Name = "Seller")]
         public string CustomerName { get; set; }
 
         [Display(Name = "Дата доставки")]
