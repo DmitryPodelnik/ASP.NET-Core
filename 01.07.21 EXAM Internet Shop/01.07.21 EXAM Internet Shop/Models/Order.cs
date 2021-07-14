@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _01._07._21_EXAM_Internet_Shop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -24,17 +25,17 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Required(ErrorMessage = "Enter an name")]
         public uint Amount { get; set; }
 
-        [Display(Name = "Name")]
-        [Required(ErrorMessage = "Enter an name")]
+        [Display(Name = "Address")]
+        [Required(ErrorMessage = "Enter an address")]
         public Address Address { get; set; }
 
         [Display(Name = "Comments")]
         public string NoteContent { get; set; }
 
         [Display(Name = "Seller")]
-        public string CustomerName { get; set; }
+        public CustomerViewModel Customer { get; set; }
 
-        [Display(Name = "Дата доставки")]
-        public DateTime DeliveryDate { get; set; }
+        [Display(Name = "Order Date")]
+        public DateTime OrderDate { get; set; }
     }
 }
