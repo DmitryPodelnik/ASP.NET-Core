@@ -15,9 +15,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public int Id { get; set; }
 
         [Display(Name = "Name")]
-        [Required(ErrorMessage = "Enter a name of product")]
+        [Required(ErrorMessage = "Enter a name of category")]
         [DataType(DataType.Text)]
-        [MinLength(10)]
+        [MinLength(2)]
         public string Name { get; set; }
 
         public List<Product> Products { get; set; } = new();

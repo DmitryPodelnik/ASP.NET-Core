@@ -65,8 +65,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductsByCategory(int? category)
         {
-            var items = await _context.Products
+            LeftSideViewModel items = new();
+            items.Products = await _context.Products
                                     .Where(p => p.CategoryId == category)
+                                    .ToListAsync();
+            items.Categories = await _context.Categories
                                     .ToListAsync();
 
             return View("AllProducts", items);
