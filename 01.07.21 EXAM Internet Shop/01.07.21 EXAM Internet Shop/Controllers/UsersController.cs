@@ -36,23 +36,10 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> MyOrders()
         {
-            //var orders = await _context.Orders
-            //                        .Join(_context.Users,
-            //                              o => o.UserId,
-            //                              u => u.Id,
-            //                              (o, u) => new Order
-            //                              {
-            //                                  Id = o.Id,
-            //                                  Number = o.Number,
-            //                                  //Address = o.Address,
-            //                                  NoteContent = o.NoteContent,
-            //                                  //Customer = o.Customer,
-            //                                  OrderDate = o.OrderDate,
-            //                                  Products = o.Products,
-            //                                  User = u.Username.ToString()
-            //                              }).ToListAsync();
-
-            var orders = await _context.Orders.ToListAsync();
+            var currentUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
+            var orders = await _context.Orders
+                                       .Where(o => o.UserId == currentUser.Id)
+                                       .ToListAsync();
 
             return View(orders);
         }
