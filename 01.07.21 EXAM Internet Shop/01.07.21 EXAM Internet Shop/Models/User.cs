@@ -61,6 +61,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [ForeignKey("RoleId")]
         public Role Role { get; set; }
 
-        public Cart Cart { get; set; }
+        public List<Order> Orders { get; set; } = new();
     }
 }

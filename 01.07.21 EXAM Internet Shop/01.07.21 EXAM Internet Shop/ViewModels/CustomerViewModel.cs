@@ -8,6 +8,8 @@ namespace _01._07._21_EXAM_Internet_Shop.ViewModels
 {
     public class CustomerViewModel
     {
+        public int Id { get; set; }
+
         [Display(Name = "Firstname")]
         [Required(ErrorMessage = "Enter a firstname")]
         [DataType(DataType.Text)]

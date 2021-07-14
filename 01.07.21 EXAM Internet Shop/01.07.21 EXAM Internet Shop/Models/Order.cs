@@ -15,27 +15,32 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Display(Name = "Name")]
-        [Required(ErrorMessage = "Enter an name")]
+        [Display(Name = "Number")]
+        [Required(ErrorMessage = "Enter an number")]
         [DataType(DataType.Text)]
         [MinLength(2)]
-        public string Name { get; set; }
-
-        [Display(Name = "Amount")]
-        [Required(ErrorMessage = "Enter an amount")]
-        public uint Amount { get; set; }
+        public string Number { get; set; }
 
         [Display(Name = "Address")]
         [Required(ErrorMessage = "Enter an address")]
         public Address Address { get; set; }
 
         [Display(Name = "Comments")]
+        [DataType(DataType.Text)]
         public string NoteContent { get; set; }
 
         [Display(Name = "Customer")]
         public CustomerViewModel Customer { get; set; }
 
         [Display(Name = "Order Date")]
+        [DataType(DataType.DateTime)]
         public DateTime OrderDate { get; set; }
+
+        [Display(Name = "Products")]
+        public List<Product> Products { get; set; } = new();
+
+        public int? UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual User User { get; set; }
     }
 }
