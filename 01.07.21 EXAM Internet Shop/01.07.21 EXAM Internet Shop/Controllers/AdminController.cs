@@ -72,7 +72,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
         [Route("addproduct")]
         [HttpPost]
-        public async Task<IActionResult> AddProduct(Product product) //[Bind("Name,Content,Image,Price,Seller")]
+        public async Task<IActionResult> AddProduct(Product product)
         {
             if (ModelState.IsValid)
             {
@@ -151,7 +151,42 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         {
             _editingCategory = id;
 
-            return View();
+            return View(await _context.Categories.FirstOrDefaultAsync(c => c.Id == id));
+        }
+
+        [Route("editproduct/{id:int}")]
+        [HttpGet]
+        public async Task<IActionResult> EditProduct(int? id)
+        {
+            _editingCategory = id;
+
+            return View(await _context.Products.FirstOrDefaultAsync(p => p.Id == id));
+        }
+
+        [Route("editproduct")]
+        [HttpPost]
+        public async Task<IActionResult> EditProduct(Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                var existedProduct = await _context.Products.FirstOrDefaultAsync(c => c.Id == _editingCategory);
+
+                if (existedProduct != null)
+                {
+                    existedProduct.Name = product.Name;
+                    _context.Products.Update(existedProduct);
+
+                    await _context.SaveChangesAsync();
+
+                    _editingCategory = null;
+
+                    return RedirectToAction("GetCategories", "Admin");
+                }
+
+                ModelState.AddModelError("", "Incorrect category name!");
+            }
+
+            return RedirectToAction("GetCategories", "Admin");
         }
 
         [Route("deletecategory")]
