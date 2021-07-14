@@ -55,9 +55,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpPost]
         public async Task<IActionResult> SearchProductsByName(string nameProduct)
         {
-            var items = await _context.Products
+            LeftSideViewModel items = new();
+            items.Products = await _context.Products
                                     .Where(p => p.Name.ToLower().Contains(nameProduct.ToLower()))
                                     .ToListAsync();
+            items.Categories = await _context.Categories.ToListAsync();
 
             return View("AllProducts", items);
         }
