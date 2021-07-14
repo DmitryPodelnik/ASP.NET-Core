@@ -1,22 +1,22 @@
 ﻿@model _01._07._21_EXAM_Internet_Shop.Models.User
 @{
-    ViewData["Title"] = "AddUser";
+    ViewData["Title"] = "Additing User";
     Layout = "_AdminLayout";
 }
 
-<form asp-action="RegisterUser" asp-controller="Authorization" method="post">
+<form asp-action="AddUser" asp-controller="Admin" method="post">
     <div class="mb-3">
         <label asp-for="Username" class="form-label">Username</label>
         <input asp-for="Username" class="form-control">
         <span asp-validation-for="Username"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="FirstName" class="form-label">FirstName</label>
+        <label asp-for="FirstName" class="form-label">Firstname</label>
         <input asp-for="FirstName" class="form-control">
         <span asp-validation-for="FirstName"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="LastName" class="form-label">LastName</label>
+        <label asp-for="LastName" class="form-label">Lastname</label>
         <input asp-for="LastName" class="form-control">
         <span asp-validation-for="LastName"></span>
     </div>
@@ -34,6 +34,16 @@
         <label asp-for="Email" class="form-label">Email address</label>
         <input asp-for="Email" class="form-control" aria-describedby="emailHelp">
         <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Country" class="form-label">Country</label>
+        <input asp-for="Country" class="form-control">
+        <span asp-validation-for="Country"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="RoleId" class="form-label">Role Id</label>
+        <input type="number" asp-for="RoleId" class="form-control" aria-describedby="emailHelp">
+        <span asp-validation-for="RoleId"></span>
     </div>
     <button type="submit" class="btn btn-success">Save</button>
 </form>

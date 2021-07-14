@@ -130,7 +130,8 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpPost]
         public async Task<IActionResult> AddUser(User user)
         {
-            if (ModelState.IsValid)
+            var a = ModelState.Values;
+            if (ModelState.IsValid) 
             {
                 var existedUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
 
