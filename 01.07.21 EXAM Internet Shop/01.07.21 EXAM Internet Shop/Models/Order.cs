@@ -42,5 +42,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public int? UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
+
+        [Display(Name = "Status")]
+        [DataType(DataType.Text)]
+        public string Status { get; set; }
     }
 }

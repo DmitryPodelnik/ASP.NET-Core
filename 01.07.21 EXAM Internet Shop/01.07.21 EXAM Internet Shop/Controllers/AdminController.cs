@@ -320,5 +320,21 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
             return RedirectToAction("GetUsers", "Admin");
         }
+
+        [Route("viewuser/{id:int}")]
+        [HttpGet]
+        public async Task<IActionResult> ViewUser(int? id)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+            if (user != null)
+            {
+                return View(user);
+            }
+
+            ModelState.AddModelError("", "User is not existed!");
+
+            return RedirectToAction("GetUsers", "Admin");
+        }
     }
 }

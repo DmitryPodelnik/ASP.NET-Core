@@ -14,7 +14,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations
             builder.HasData(
               new Order[]
               {
-                  new Order { Id = 1, NoteContent = "Admin order", UserId = 1, Number = "432342", OrderDate = DateTime.Now, },
+                  new Order { Id = 1, NoteContent = "Admin order", UserId = 1, Number = "432342", OrderDate = DateTime.Now, Status = "Completed" },
               });
         }
     }
