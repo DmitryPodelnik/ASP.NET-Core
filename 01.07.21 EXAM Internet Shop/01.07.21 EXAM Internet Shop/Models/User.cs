@@ -51,8 +51,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [StringLength(320, ErrorMessage = "Incorrect length")]
         public string Email { get; set; }
 
-
-        [Required]
         [DataType(DataType.Text)]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Incorrect length")]
         public string Country { get; set; }
@@ -60,6 +58,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public int? RoleId { get; set; }
         [ForeignKey("RoleId")]
         public Role Role { get; set; }
+
+        //public int? CartId { get; set; }
+        //[ForeignKey("CartId")]
+        //public Cart Cart { get; set; }
+        public Cart Cart { get; set; }
 
         public List<Order> Orders { get; set; } = new();
     }

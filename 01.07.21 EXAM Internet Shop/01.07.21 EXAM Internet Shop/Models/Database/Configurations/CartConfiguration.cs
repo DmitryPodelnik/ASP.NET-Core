@@ -14,7 +14,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations
             builder.HasData(
               new Cart[]
               {
-                  new Cart { Id = 1, UserId = 1},
+                  new Cart { Id = 1, UserId = 1 },
                   new Cart { Id = 2, UserId = 2 },
               });
         }

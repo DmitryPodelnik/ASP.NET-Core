@@ -57,7 +57,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 {
                     user.Password = Convert.ToBase64String(_sha256.ComputeHash(Encoding.UTF8.GetBytes(user.Password)));
                     user.RoleId = 1;
-
+                     
                     await _context.Users.AddAsync(user);
                     await _context.SaveChangesAsync();
                     return RedirectToAction("AllProducts", "Products");

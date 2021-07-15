@@ -18,9 +18,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public string? tempId { get; set; }
 #pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
 
-        public int UserId { get; set; }
+        //public User User { get; set; } = new();
+
+        public int? UserId { get; set; }
         [ForeignKey("UserId")]
-        public virtual User User { get; set; }
+        public User User { get; set; }
 
         public List<Product> Products { get; set; } = new();
 

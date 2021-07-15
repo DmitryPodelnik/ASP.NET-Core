@@ -22,53 +22,56 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
 
-            //var products = await _context.Carts
-            //                             .Join(
-            //                                _context.Users,
-            //                                c => c.UserId,
-            //                                u => u.Id,
-            //                                (c, u) => new
-            //                                {
-            //                                    Id = c.Id,
-
-            //                                }
-            //                                )
-
-            var products = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"]);
-
-            return View(products);
+            return View(user);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddProduct(int id)
         {
             var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+            var currentUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
             var guid = Guid.NewGuid().ToString();
 
-            if (Request.Cookies["guid"] == null)
-            {
-                Cart newCart = new();
-                newCart.Products.Add(product);
-                newCart.tempId = guid;
-                Response.Cookies.Append("guid", guid);
+            //if (currentUser.Cart == null)
+            //{
+                //Cart cart = new();
+                //cart.Products.Add(product);
+                currentUser.Cart.Products.Add(product);
+                //var existCart = _context.Carts.Add(cart);
 
-                await _context.Carts.AddAsync(newCart);
-                await _context.SaveChangesAsync();
+                //currentUser.CartId = existCart.Entity.Id;
+            //}
+            //else
+            //{
+                //currentUser.Cart.Products.Add(product);
+            //}
 
-
-                var cartd = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"] && c.tempId != null);
-
-                return RedirectToAction("GetProducts", "Cart", newCart);
-            }
-     
-            var cart = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"]);
-            cart.Products.Add(product);
-
-            _context.Carts.Update(cart);
+            _context.Users.Update(currentUser);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("GetProducts", "Cart", cart);
+            //if (Request.Cookies["guid"] == null)
+            //{
+            //Cart newCart = new();
+            //newCart.Products.Add(product);
+            //newCart.tempId = guid;
+            //Response.Cookies.Append("guid", guid);
+
+            //await _context.Carts.AddAsync(newCart);
+
+            //var cartd = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"] && c.tempId != null);
+
+            return RedirectToAction("GetProducts", "Cart");
+            //}
+     
+            //var cart = await _context.Carts.FirstOrDefaultAsync(c => c.tempId == Request.Cookies["guid"]);
+            //cart.Products.Add(product);
+
+            //_context.Carts.Update(cart);
+            //await _context.SaveChangesAsync();
+
+            //return RedirectToAction("GetProducts", "Cart", cart);
         }
     }
 }
