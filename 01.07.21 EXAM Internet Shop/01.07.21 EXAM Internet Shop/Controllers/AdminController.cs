@@ -53,7 +53,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCurrentOrders()
         {
-            return View(await _context.Users.ToListAsync());
+            return View(await _context.Orders.Where(o => o.Status != "Completed").ToListAsync());
         }
 
         [Route("getordershistory")]

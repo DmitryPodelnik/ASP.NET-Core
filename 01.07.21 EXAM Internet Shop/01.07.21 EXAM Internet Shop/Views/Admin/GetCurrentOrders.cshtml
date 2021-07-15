@@ -1,9 +1,38 @@
 ﻿@using _01._07._21_EXAM_Internet_Shop.Models
-@model List<Category>
+@model List<Order>
 @{
-    ViewData["Title"] = "GetCurrentOrders";
+    ViewData["Title"] = "Current orders";
     Layout = "_AdminLayout";
 }
 
-<h1>GetCurrentOrders</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Products</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Comment</th>
+            <th scope="col">User Id</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Number</th>
+                <td>
+                    @foreach (var product in item.Products)
+                    {
+                        <p>product.Code</p>
+                    }
+                </td>
+                <td>@item.OrderDate</td>
+                <td>@item.NoteContent</td>
+                <td>@item.UserId</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
