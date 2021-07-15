@@ -4,7 +4,7 @@ using _01._07._21_EXAM_Internet_Shop.Models.Database.Configurations;
 
 namespace _01._07._21_EXAM_Online_Store
 {
-    public  class OnlineStoreDbContext : DbContext
+    public class OnlineStoreDbContext : DbContext
     {
         public OnlineStoreDbContext(DbContextOptions<OnlineStoreDbContext> options) : base(options)
         {
@@ -30,6 +30,7 @@ namespace _01._07._21_EXAM_Online_Store
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
         }
 
         public DbSet<User> Users { get; set; }
