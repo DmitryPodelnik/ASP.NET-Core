@@ -113,11 +113,15 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
         [Route("checkout")]
         [HttpPost]
-        public async Task<IActionResult> Checkout()
+        public async Task<IActionResult> Checkout(Order order)
         {
-
-
-            return View();
+            if (ModelState.IsValid)
+            {
+                await _context.Orders.AddAsync(order);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("MyOrders", "Users");
+            }
+            return View(order);
         }
     }
 }
