@@ -34,8 +34,7 @@
                                 <input type="submit" asp-controller="" asp-action="" class="btn btn-success m-1" value="Price: $@item.Price" disabled />
                                 @using (Html.BeginForm("DeleteItem", "Cart", FormMethod.Post))
                                 {
-                                    <div id="sure">
-                                    <input id="isSure" type="submit" onclick="whetherToDelete()" asp-area="" asp-controller="Cart" asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger m-1" value="Delete from cart" />
+                                    <input id="isSure" type="submit" asp-area="" asp-controller="Cart" asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger m-1" value="Delete from cart" />
                                     <script>
                                         //function whetherToDelete() {
 
@@ -55,7 +54,6 @@
                                         //    div.append(el);
                                         //}
                                     </script>
-                                    </div>
                                 }
                             </div>
                         </div>

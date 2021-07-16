@@ -80,22 +80,19 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
         [Route("deleteitem")]
         [HttpPost]
-        public async Task<IActionResult> DeleteItem(int id, string isSure)
+        public async Task<IActionResult> DeleteItem(int id)
         {
-            if (isSure == "true")
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
+            var cart = await _context.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.UserId == user.Id);
+            var product = cart.CartProduct.FirstOrDefault(p => p.ProductId == id);
+
+            if (product != null)
             {
-                var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
-                var cart = await _context.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.UserId == user.Id);
-                var product = cart.CartProduct.FirstOrDefault(p => p.ProductId == id);
+                cart.CartProduct.Remove(product);
 
-                if (product != null)
-                {
-                    cart.CartProduct.Remove(product);
+                await _context.SaveChangesAsync();
 
-                    await _context.SaveChangesAsync();
-
-                    return RedirectToAction("GetProducts", "Cart");
-                }
+                return RedirectToAction("GetProducts", "Cart");
             }
 
             return RedirectToAction("GetProducts", "Cart");
