@@ -15,11 +15,35 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Display(Name = "Firstname")]
+        [Required(ErrorMessage = "Enter an firstname")]
+        [DataType(DataType.Text)]
+        [MinLength(2)]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Lastname")]
+        [Required(ErrorMessage = "Enter an lastname")]
+        [DataType(DataType.Text)]
+        [MinLength(2)]
+        public string LastName { get; set; }
+
         [Display(Name = "Number")]
         [Required(ErrorMessage = "Enter an number")]
         [DataType(DataType.Text)]
         [MinLength(2)]
         public string Number { get; set; }
+
+        [Display(Name = "City")]
+        [Required(ErrorMessage = "Enter an city")]
+        [DataType(DataType.Text)]
+        [MinLength(2)]
+        public string City { get; set; }
+
+        [Display(Name = "Address")]
+        [Required(ErrorMessage = "Enter an address")]
+        [DataType(DataType.Text)]
+        [MinLength(2)]
+        public string Address { get; set; }
 
         //[Display(Name = "Address")]
         //[Required(ErrorMessage = "Enter an address")]
@@ -28,6 +52,12 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [Display(Name = "Comments")]
         [DataType(DataType.Text)]
         public string NoteContent { get; set; }
+
+        [Display(Name = "Phone")]
+        [Required(ErrorMessage = "Enter an phone")]
+        [DataType(DataType.PhoneNumber)]
+        [MinLength(2)]
+        public string Phone { get; set; }
 
         //[Display(Name = "Customer")]
         //public CustomerViewModel Customer { get; set; }

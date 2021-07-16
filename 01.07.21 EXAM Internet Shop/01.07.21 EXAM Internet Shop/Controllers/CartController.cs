@@ -103,5 +103,14 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
             return RedirectToAction("GetProducts", "Cart");
         }
+
+        [Route("checkout")]
+        [HttpGet]
+        public async Task<IActionResult> Checkout()
+        {
+
+
+            return View();
+        }
     }
 }
