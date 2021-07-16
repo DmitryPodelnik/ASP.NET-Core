@@ -43,6 +43,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         [MinLength(2)]
         public string Address { get; set; }
 
+        [Display(Name = "Price")]
+        [DataType(DataType.Text)]
+        [MinLength(1)]
+        public string Price { get; set; }
+
         //[Display(Name = "Address")]
         //[Required(ErrorMessage = "Enter an address")]
         //public Address Address { get; set; }
