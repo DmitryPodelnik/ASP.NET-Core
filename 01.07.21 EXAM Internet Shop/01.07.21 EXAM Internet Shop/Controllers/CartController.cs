@@ -106,8 +106,11 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
         [Route("checkout")]
         [HttpGet]
-        public async Task<IActionResult> Checkout()
+        public async Task<IActionResult> Checkout(double price)
         {
+            //Order order = new();
+            //order.Price = Convert.ToString(price);
+
             return View();
         }
 
@@ -117,13 +120,19 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         {
             if (ModelState.IsValid)
             {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
+
                 order.OrderDate = DateTime.Now;
                 order.Number = _context.Orders.OrderByDescending(o => o).First().Number + 1;
                 order.Status = "New Order";
                 order.Price = order.Price;
+                order.UserId = user.Id;
 
                 await _context.Orders.AddAsync(order);
                 await _context.SaveChangesAsync();
+
+                await EmptyCart();
+
                 return RedirectToAction("MyOrders", "Users");
             }
             return View(order);
