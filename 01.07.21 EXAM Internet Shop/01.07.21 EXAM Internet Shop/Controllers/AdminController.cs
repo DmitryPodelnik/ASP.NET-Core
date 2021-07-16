@@ -149,7 +149,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
         [Route("editcategory")]
         [HttpPost]
-        public async Task<IActionResult> EditCategory([Bind("Name")] Category category)
+        public async Task<IActionResult> EditCategory(Category category)
         {
             if (ModelState.IsValid)
             {

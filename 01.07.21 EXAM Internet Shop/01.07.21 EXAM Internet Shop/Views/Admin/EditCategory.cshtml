@@ -4,14 +4,17 @@
     Layout = "_AdminLayout";
 }
 
-<form asp-action="EditCategory" asp-controller="Admin" method="post">
-    <div class="mb-3">
-        <label asp-for="Name" class="form-label">New Name</label>
-        <input asp-for="Name" class="form-control">
-        <span asp-validation-for="Name"></span>
-    </div>
-    <button type="submit" class="btn btn-success">Save</button>
-</form>
+@*<form asp-action="EditCategory" asp-controller="Admin" method="post">*@
+    @using (Html.BeginForm("EditCategory", "Admin", FormMethod.Post))
+    {
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">New Name</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+    }
+    @*</form>*@
 
 @section Scripts {
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
