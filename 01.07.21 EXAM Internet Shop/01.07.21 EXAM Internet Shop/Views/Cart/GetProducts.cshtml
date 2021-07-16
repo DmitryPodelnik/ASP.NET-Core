@@ -7,8 +7,9 @@
 <!-- Cart Modal -->
 <div id="cartModal">
     <div>
-        <div class="align-text-bottom">
+        <div class="col align-text-bottom">
             <div>
+                @{double fullPrice = 0;}
                 @if (Model.Count == 0)
                 {
                     <h5 class="text-center">Cart is empty</h5>
@@ -19,6 +20,7 @@
                 {
                     @foreach (var item in Model)
                     {
+                        fullPrice += item.Price;
                         <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
                             <img src=~/images/Products/@item.Image class="card-img-top" alt="image">
                             <div class="card-body">
@@ -29,10 +31,12 @@
                     }
                 }
             </div>
-            <div class="justify-content-between text-center">
-                <a class="btn btn-outline-success" asp-area="" asp-controller="Products" asp-action="AllProducts">Continue shopping</a>
-                <button type="button" class="btn btn-outline-dark">Empty cart</button>
-                <a class="btn btn-success" asp-area="" asp-controller="Authorization" asp-action="RegisterUser">Checkout</a>
+            <div class="text-center justify-content-center" style="display: flex;">
+                <a class="btn btn-outline-success" style="width: min-content;" asp-area="" asp-controller="Products" asp-action="AllProducts">Continue shopping</a>
+                <button type="button" class="btn btn-outline-dark" style="">Empty cart</button>
+                <div class="border border-success" style="display: flex; width: max-content; padding: 20px; align-items: center">
+                    <span class="text-danger text-s h2 m-0">@fullPrice ₴</span> <a class="btn btn-success align-items-center" asp-area="" asp-controller="Authorization" asp-action="RegisterUser" style="margin-left: 10px">Checkout</a>
+                </div>
             </div>
         </div>
     </div>
