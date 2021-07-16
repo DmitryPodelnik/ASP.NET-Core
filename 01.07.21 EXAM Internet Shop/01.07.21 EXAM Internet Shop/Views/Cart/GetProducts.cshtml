@@ -29,10 +29,34 @@
                         fullPrice += item.Price;
                         <div class="card" style="width: 18rem; border: 0.5px solid grey; border-radius: 0; justify-content: space-between;">
                             <img src=~/images/Products/@item.Image class="card-img-top" alt="image">
-                            <div class="card-body">
+                            <div class="card-body" id="sure">
                                 <h6 class="card-title">@item.Name</h6>
                                 <input type="submit" asp-controller="" asp-action="" class="btn btn-success m-1" value="Price: $@item.Price" disabled />
-                                <input type="submit" asp-controller="" asp-action="" class="btn btn-danger m-1" value="Delete from cart" />
+                                @using (Html.BeginForm("DeleteItem", "Cart", FormMethod.Post))
+                                {
+                                    <div id="sure">
+                                    <input id="isSure" type="submit" onclick="whetherToDelete()" asp-area="" asp-controller="Cart" asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger m-1" value="Delete from cart" />
+                                    <script>
+                                        //function whetherToDelete() {
+
+                                        //    let el = document.createElement("input");
+                                        //    el.type = "hidden";
+                                        //    el.name = "isSure";
+
+                                        //    if (confirm("Are you sure to delete this item?")) {
+                                        //        //el.setAttribute("asp-route-isSure", "true");
+                                        //        el.value = "true";
+                                        //    } else {
+                                        //        //el.setAttribute("asp-route-isSure", "false");
+                                        //        el.value = "false";
+                                        //    }
+
+                                        //    let div = document.getElementById("sure");
+                                        //    div.append(el);
+                                        //}
+                                    </script>
+                                    </div>
+                                }
                             </div>
                         </div>
                     }

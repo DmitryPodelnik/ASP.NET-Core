@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace _01._07._21_EXAM_Internet_Shop.Controllers
 {
+    [Route("cart")]
     public class CartController : Controller
     {
         private readonly OnlineStoreDbContext _context;
@@ -63,6 +64,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             return RedirectToAction("GetProducts", "Cart");
         }
 
+        [Route("emptycart")]
         [HttpGet]
         public async Task<IActionResult> EmptyCart()
         {
@@ -72,6 +74,29 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             cart.CartProduct.Clear();
 
             await _context.SaveChangesAsync();
+
+            return RedirectToAction("GetProducts", "Cart");
+        }
+
+        [Route("deleteitem")]
+        [HttpPost]
+        public async Task<IActionResult> DeleteItem(int id, string isSure)
+        {
+            if (isSure == "true")
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
+                var cart = await _context.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.UserId == user.Id);
+                var product = cart.CartProduct.FirstOrDefault(p => p.ProductId == id);
+
+                if (product != null)
+                {
+                    cart.CartProduct.Remove(product);
+
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction("GetProducts", "Cart");
+                }
+            }
 
             return RedirectToAction("GetProducts", "Cart");
         }
