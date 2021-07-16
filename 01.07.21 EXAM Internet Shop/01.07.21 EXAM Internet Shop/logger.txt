@@ -3933,3 +3933,42 @@ Hosting environment: Development
 Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
 The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
 The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+An exception occurred while iterating over the results of a query for context type '_01._07._21_EXAM_Online_Store.OnlineStoreDbContext'.
+System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Int32'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method194(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+An unhandled exception has occurred while executing the request.
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+An exception occurred while iterating over the results of a query for context type '_01._07._21_EXAM_Online_Store.OnlineStoreDbContext'.
+System.InvalidCastException: Unable to cast object of type 'System.String' to type 'System.Int32'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method297(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\ШАГ\3 КУРС БАКАЛАВРАТА\ASP.NET\01.07.21 EXAM Internet Shop\01.07.21 EXAM Internet Shop
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.

@@ -117,6 +117,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         {
             if (ModelState.IsValid)
             {
+                order.OrderDate = DateTime.Now;
+                order.Number = _context.Orders.OrderByDescending(o => o).First().Number + 1;
+
                 await _context.Orders.AddAsync(order);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("MyOrders", "Users");

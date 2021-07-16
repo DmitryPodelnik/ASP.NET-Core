@@ -29,9 +29,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
 
         [Display(Name = "Number")]
         [Required(ErrorMessage = "Enter an number")]
-        [DataType(DataType.Text)]
-        [MinLength(2)]
-        public string Number { get; set; }
+        public int Number { get; set; }
 
         [Display(Name = "City")]
         [Required(ErrorMessage = "Enter an city")]
