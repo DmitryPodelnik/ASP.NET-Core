@@ -31,7 +31,8 @@
                             <img src=~/images/Products/@item.Image class="card-img-top" alt="image">
                             <div class="card-body">
                                 <h6 class="card-title">@item.Name</h6>
-                                <input type="submit" asp-controller="" asp-action="" class="btn btn-success" value="Price: $@item.Price" />
+                                <input type="submit" asp-controller="" asp-action="" class="btn btn-success m-1" value="Price: $@item.Price" disabled />
+                                <input type="submit" asp-controller="" asp-action="" class="btn btn-danger m-1" value="Delete from cart" />
                             </div>
                         </div>
                     }
@@ -41,7 +42,7 @@
                 <a class="btn btn-outline-success m-1" style="height: max-content" asp-area="" asp-controller="Products" asp-action="AllProducts">Continue shopping</a>
                 @if (Model != null && Model.Count != 0)
                 {
-                    <button type="button" class="btn btn-outline-dark m-1" style="height: max-content">Empty cart</button>
+                    <a asp-controller="Cart" asp-action="EmptyCart" class="btn btn-outline-dark m-1" style="height: max-content">Empty cart</a>
                     <div class="border border-success m-1" style="display: flex; width: max-content; padding: 20px; align-items: center">
                         <span class="text-danger text-s h2 m-0">@fullPrice ₴</span> <a class="btn btn-success align-items-center" asp-area="" asp-controller="Authorization" asp-action="RegisterUser" style="margin-left: 10px">Checkout</a>
                     </div>

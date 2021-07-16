@@ -62,5 +62,18 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
 
             return RedirectToAction("GetProducts", "Cart");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> EmptyCart()
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
+            var cart = await _context.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.UserId == user.Id);
+
+            cart.Products.Clear();
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("GetProducts", "Cart");
+        }
     }
 }
