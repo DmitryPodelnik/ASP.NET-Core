@@ -108,6 +108,13 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         [HttpGet]
         public async Task<IActionResult> Checkout()
         {
+            return View();
+        }
+
+        [Route("checkout")]
+        [HttpPost]
+        public async Task<IActionResult> Checkout()
+        {
 
 
             return View();
