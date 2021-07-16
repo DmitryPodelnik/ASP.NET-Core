@@ -23,10 +23,9 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
         public async Task<IActionResult> GetProducts()
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
-            //var courses = db.Courses.Include(c => c.Students).ToList();
-            var products = await _context.Products.Include(p => p.Carts).ToListAsync();
+            var cart = await _context.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.UserId == user.Id);
 
-            return View(products);
+            return View(cart.Products);
         }
 
         [HttpPost]
