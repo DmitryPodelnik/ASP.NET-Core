@@ -25,6 +25,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public User User { get; set; }
 
         public List<Product> Products { get; set; } = new();
-
+        public List<CartProduct> CartProduct { get; set; } = new();
     }
 }

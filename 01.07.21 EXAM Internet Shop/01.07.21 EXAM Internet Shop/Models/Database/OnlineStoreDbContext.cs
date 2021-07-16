@@ -31,6 +31,25 @@ namespace _01._07._21_EXAM_Online_Store
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new CartProductConfiguration());
+
+
+            modelBuilder.Entity<Cart>()
+            .HasMany(p => p.Products)
+            .WithMany(p => p.Carts)
+            .UsingEntity<CartProduct>(
+                j => j
+                    .HasOne(pt => pt.Product)
+                    .WithMany(t => t.CartProduct)
+                    .HasForeignKey(pt => pt.ProductId),
+                j => j
+                    .HasOne(pt => pt.Cart)
+                    .WithMany(p => p.CartProduct)
+                    .HasForeignKey(pt => pt.CartId),
+                j =>
+                {
+                    j.HasKey(t => new { t.Id });
+                });
         }
 
         public DbSet<User> Users { get; set; }

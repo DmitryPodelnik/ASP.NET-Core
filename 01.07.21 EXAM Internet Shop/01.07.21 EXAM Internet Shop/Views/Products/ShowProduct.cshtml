@@ -29,7 +29,10 @@
                     </p>
                 </div>
             </div>
-            <input type="submit" asp-controller="Cart" asp-action="AddProduct" asp-route-id="@Model.Id" class="btn btn-success" value="Buy $@Model.Price">
+            @using (Html.BeginForm("AddProduct", "Cart", FormMethod.Post))
+            {
+                <input type="submit" asp-controller="Cart" asp-action="AddProduct" asp-route-id="@Model.Id" class="btn btn-success" value="Buy $@Model.Price">
+            }
         </div>
     </div>
 </div>

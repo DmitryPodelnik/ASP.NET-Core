@@ -54,5 +54,6 @@ namespace _01._07._21_EXAM_Internet_Shop.Models
         public virtual Order Order { get; set; }
 
         public List<Cart> Carts { get; set; } = new();
+        public List<CartProduct> CartProduct { get; set; } = new();
     }
 }

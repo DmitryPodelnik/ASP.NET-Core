@@ -25,7 +25,15 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == HttpContext.User.Identity.Name);
             var cart = await _context.Carts.Include(c => c.Products).FirstOrDefaultAsync(c => c.UserId == user.Id);
 
-            return View(cart.Products);
+
+            if (cart != null)
+            {
+                return View(cart.Products);
+            }
+
+            Cart tempCart = new();
+
+            return View(tempCart.Products);
         }
 
         [HttpPost]
