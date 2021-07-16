@@ -120,6 +120,7 @@ namespace _01._07._21_EXAM_Internet_Shop.Controllers
                 order.OrderDate = DateTime.Now;
                 order.Number = _context.Orders.OrderByDescending(o => o).First().Number + 1;
                 order.Status = "New Order";
+                order.Price = order.Price;
 
                 await _context.Orders.AddAsync(order);
                 await _context.SaveChangesAsync();
